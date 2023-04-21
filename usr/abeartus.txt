@@ -1,0 +1,6 @@
+abeartus
+SWEproj00
+banana 5
+corn 2
+egg 1
+milk 1.8 gallon
