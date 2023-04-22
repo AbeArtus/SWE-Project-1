@@ -1,6 +1,6 @@
 #include "Ingredient.h"
 #include <vector>
-#include <string>
+#include <string.h>
 #include <sys/stat.h>
 #include <fstream>
 #include <iostream>
@@ -10,17 +10,79 @@ using namespace std;
 
 class Recipe {
     private:
-        
+        string typeDir;
     public:
 
-        string name;
-        string description;
-        vector<Ingredient> Ingredients;
-        string directions;
-        string servingSize;
-        int cookTime; // units in minutes
+        string name;                    // name of the recipe
+        string servingSize[2];          // {amount, unit } EX: 2 servings
+        int cookTime;                   // units in minutes 
+        string description;             // brief description
+        vector<Ingredient> Ingredients; // Ingredients
+        string directions;              // Directions (Large String)
+        
+    // directories /Recipes/{Breakfast}{Lunch}{Dinner}{Snacks}{Desert}
+    Recipe(string FILENAME, string dir){
+        typeDir = dir;
+        // open the recipe file inside given Dir
+        ifstream infile("Recipes/"+ dir + "/" + FILENAME + ".txt" );
+        if (!infile.is_open()){
+                cout 
+                    << "Error opening file: " 
+                    << "~/Recipes/"+ dir + "/" + FILENAME + ".txt"
+                    << endl;
+                return;
+        }
+        string line;
+
+        // get name of the recipe
+        getline(infile, name);
+        getline(infile, line); // load #
 
         
+        // Get the serving size
+        getline(infile, line);
+        istringstream lineStream(line);
+        lineStream >> servingSize[0]>>servingSize[1];
+        lineStream.clear();
+        getline(infile, line); // load #
+        
+        // Get Cook Time
+        getline(infile, line);
+        lineStream.str(line);   // load into stream
+        lineStream >> cookTime; // extract the integer
+        lineStream.clear();     // clear remaining "min" (its assumed)
+        getline(infile, line);  // remove load #
+        getline(infile, line);  // remove remove # from stream
+
+        // get the description
+        while(line != "#"){
+            description.append(line);
+            getline(infile, line);
+        }
+        
+        // Get ingredients
+        getline(infile, line);
+        while(line != "#"){
+            istringstream lineStream(line);
+            string itemname;
+            double amount;
+            string unit;
+
+            lineStream >> itemname;
+            if( !(lineStream >> amount) ) 
+                Ingredients.push_back(Ingredient(itemname));
+            else if (!(lineStream >> unit))
+                Ingredients.push_back(Ingredient(itemname,amount));
+            else 
+                Ingredients.push_back(Ingredient(itemname,amount,unit));
+            getline(infile, line);
+
+            lineStream.clear();
+        }
+        while(getline(infile, line)){
+            directions.append(line + "\n");
+        }
+    }
         
     string getIngredientString() {
         string item;
@@ -28,9 +90,12 @@ class Recipe {
             item.append(Ingredients.at(i).getString());
         return item;
     }
+
     string getString() {
         string str;
-        str.append(name + "\n");
+        str.append(name + "\n#\n");
+        str.append(servingSize[0] + " " + servingSize[1] + "\n#\n" );
+        str.append(to_string(cookTime) + " min\n#\n");
         str.append(description+ "\n#\n");
         str.append(getIngredientString()+"#\n");
         str.append(directions);
@@ -46,30 +111,26 @@ class Recipe {
         
     }
 
-    void updatelist(string name, string dir) {
+    void updatelist(string name, string RecipeDir) {
 
         // get the list from the given directory
-        string direc =  "Recipes/"+dir+"/~list.txt";
+        string direc =  "Recipes/"+RecipeDir+"/~list.txt";
 
-        ofstream directoryFile;
-        directoryFile.open(direc);
+        ifstream infile(direc);
+
         // check to see if the file is opened
-        if (directoryFile.is_open()){
+        if (infile.is_open()){
             // read the file to see if name exists
-            string recipe;
-            while (getline(directoryFile, recipe)){
-                int sameName = strcmp(name, recipe);
-                if (sameName ==0){
-                    // the recipe is already in the file
-                    cout<< " Recipe already exists"<< endl;
-                    break;
-                }
+            vector<string> recipes;
+            string line;
+
+            while (getline(infile, line)) {
+                recipes.push_back(line);
             }
-            // Add the recipe name  if ! exists
-            directoryFile << name;
+            
 
         }
-        directoryFile.close();
+        infile.close();
 
     }
         
@@ -87,14 +148,13 @@ class Recipe {
     }
 
     // Create a textfile from the parameters in the constructor
-
-    writeTextFile() {
+    void writeTextFile() {
 
         // create a text file
 
         fstream recipeFile;
-        recipe_file.open(name, ios::out);
-        if !(recipeFile)
+        recipeFile.open(name, ios::out);
+        if (!(recipeFile))
         {
             cout << "File not created";
         }
@@ -113,11 +173,11 @@ class Recipe {
 
             // loop for instruction vector
             int numIngr = Ingredients.size();
-            for (int idx = 0; i < numIngr; i++) {
-                Ingredient current = Ingredients[idx];
-                recipeFile << current;
+            for (int i = 0; i < numIngr; i++) {
+                Ingredient current = Ingredients[i];
+                recipeFile << current.getString();
 
-                if !(idx == numIngr - 1)
+                if (!(i == numIngr - 1))
                 {
                     // Add a new line if it is not the last ingredient in the vector
                     recipeFile << endl;
@@ -128,60 +188,20 @@ class Recipe {
             }
 
             // Close the file
-            recioeFile.come();
+            recipeFile.close();
 
 
         }
     }
 
-    // directories /Recipes/{Breakfast}{Lunch}{Dinner}{Snacks}{Desert}
-    Recipe(string FILENAME, string dir){
-        ifstream infile("Recipes/"+ dir + "/" + FILENAME + ".txt" );
-        if (!infile.is_open()){
-                cout 
-                    << "Error opening file: " 
-                    << "Recipes/"+ dir + "/" + FILENAME + ".txt"
-                    << " in ~/usr" << endl;
-                return;
-        }
-        string line;
 
-        getline(infile, name);
-        getline(infile, line);
-        while(line != "#"){
-            description.append(line);
-            getline(infile, line);
-        }
-        
-        getline(infile, line);
-        while(line != "#"){
-            istringstream lineStream(line);
-            string itemname;
-            double amount;
-            string unit;
-
-            lineStream >> itemname;
-            if( !(lineStream >> amount) ) 
-                Ingredients.push_back(Ingredient(itemname));
-            else if (!(lineStream >> unit))
-                Ingredients.push_back(Ingredient(itemname,amount));
-            else 
-                Ingredients.push_back(Ingredient(itemname,amount,unit));
-            getline(infile, line);
-        }
-        while(getline(infile, line)){
-            directions.append(line + "\n");
-        }
-    }
-
-
-}
+};
 
 
     int main() {
         Recipe recipe = Recipe("Breakfast_Burritos", "Breakfast");
         cout << recipe.getString();
 
-        recipe.updatelist(recipe.name, "Breakfast")
+        recipe.updatelist(recipe.name, "Breakfast");
         return 0;
     }

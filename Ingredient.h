@@ -65,7 +65,7 @@ class Ingredient {
                 else if (amount != -1)
                     itemStr = (itemName + " " + ss.str() + "\n");
                 else
-                    itemStr = itemName;
+                    itemStr = itemName + "\n";
                 return itemStr;
         }      
 

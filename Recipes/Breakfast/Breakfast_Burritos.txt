@@ -1,15 +1,20 @@
 Breakfast Burritos
+#
+2 Burritos
+#
+20 min
+#
 Make this breakfast wrap on mornings when you're in a hurry and don't have time to sit and eat. Even better. Make it a night before and pop it in the microwave for about 30 sec.
 #
-1 Cooking_Spray
-1 Frozen_Diced_Potatoes_with_onion_and_peppers cup
-2 Canola_oil
-4 egg
-1 Salt pinch
-1 ground_pepper pinch
-1/3 shredded_chedddar_cheese
-1/4 salsa cup
-2 tortilla
+Cooking_Spray
+Salt
+Ground_Pepper
+Frozen_Diced_Potatoes_with_onion_and_peppers 1 cup
+Canola_oil 2
+Egg 4
+Shredded_chedddar_cheese .33 cup
+Salsa .25 cup 
+Tortilla 2
 #
 On the Stove:
 1. coat a medium-sized skillet with cooking spray and heat over medium-high heat for about 1 1/2 minutes
