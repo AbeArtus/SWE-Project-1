@@ -6,14 +6,14 @@ Chicken, Mashed Potatoes, and Green Beans
 #
 It may not be exactly like Mom's, but this hearty, warm meal will put a smile on your face. Make it your own by experimenting with the spices while pan frying the chicken--try lemon juice and garlic salt, taco seasoning, or lime juice and honey.
 #
-Olive_Oil 3.0 Tablespoons
-Chicken_Breast 2.0 Pounds
-Potatoes_Peeled_And_Quartered 2.0 Pounds
-Butter 4.0 Tablespoon
-Salt 1.0 Teaspoon
-Ground_Black_Pepper 0.5 Teaspoon
-Milk 1.0 Cup
-Steamed_Green_Beans 12.0 Ounces
+Olive_Oil 42.0 g
+Chicken_Breast 908.0 g
+Potatoes_Peeled_And_Quartered 908.0 g
+Butter 56.8 g
+Salt 7.0 g
+Ground_Black_Pepper 1.7 g
+Milk 243.0 g
+Steamed_Green_Beans 188.0 g
 #
 1. In a large skillet, heat oil over medium-high heat for 1 minute. Add chicken and cover. Cook for 8 minutes per side, or until no longer pink in the center. Turn off heat and cover to keep warm.
 
