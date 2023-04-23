@@ -4,7 +4,7 @@
 #include "Fridge.h"
 #include "Recipe.h"
 
-
+using namespace std;
 
 int main(){
 
