@@ -27,29 +27,29 @@ Final project for the SWE class: "The fridge app"
 
 #### Userfile / fridge file
 <p>The username, password, and fridge items are all stored in the usr file in the directory</p>
-``
+<p>
 [~/usr]
-``
+</p>
 <p>The file name will be the username<br>
 EX: username.txt</p>
 
 With the file format of:
-``
+<p>
 [username]
 [password]
 [Ingredients]
-``
+</p>
 #### Recipe Files and Directory Structure
 
 <p>The Directory files are stored inside of the directories:</p>
-``
+<p>
 [~/Recipes/Breakfast/...]
 [~/Recipes/Lunch/...]
 [~/Recipes/Dinner/...]
 [~/Recipes/Snacks/...]
-``
+</p>
 <p>With each recipe file haveing the format of:</p>
-``
+<p>
 [name of recipe]
 #
 [Serving Size]
@@ -59,5 +59,5 @@ With the file format of:
 [Ingredients]
 #
 [Directions]
-``
+</p>
 
