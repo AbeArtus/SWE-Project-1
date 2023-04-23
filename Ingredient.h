@@ -1,10 +1,5 @@
 #ifndef INGREDIENT_H
 #define INGREDIENT_H
-
-// Create's an abstract Food "item"
-
-
-
 #include <string>
 #include <sstream>
 #include <iomanip>
@@ -67,7 +62,30 @@ class Ingredient {
                 else
                     itemStr = itemName + "\n";
                 return itemStr;
-        }      
+        }   
+
+        string getText() {
+            stringstream ss;
+            string itemStr;
+             if (amount - int(amount) != 0) 
+                    ss << fixed << setprecision(2) << amount;
+                else
+                    ss << fixed << setprecision(0) << amount;
+
+                if (unit.compare("") != 0) 
+                    if (amount ==1.0)
+                        itemStr = (ss.str()  + " " +  unit + " of " +   itemName+ "\n");
+                    else    
+                        itemStr = (ss.str()  + " " +  unit + "'s of " +   itemName+ "\n");
+                else if (amount != -1)
+                    if (amount == 1.0)
+                        itemStr = (ss.str() + " " +  itemName + "\n");
+                    else
+                        itemStr = (ss.str() + " " +  itemName+ "'s\n");
+                else
+                    itemStr = itemName + "\n";
+                return itemStr;
+        }    
 
 };
 #endif // INGREDIENT_H

@@ -40,12 +40,13 @@ class Fridge {
 
 
     public:
-        Fridge(string FILENAME) {
-            ifstream infile("usr/"+FILENAME+".txt");
+    
+        Fridge(string USERFILENAME) {
+            ifstream infile("usr/"+USERFILENAME+".txt");
             if (!infile.is_open()){
                 cout 
                     << "Error opening file: " 
-                    << FILENAME << ".txt" 
+                    << USERFILENAME << ".txt" 
                     << " in ~/usr" << endl;
                 return;
             }
@@ -78,9 +79,11 @@ class Fridge {
             }
             infile.close();
         }
+
         int size() {
             return myFridge.size();
         }
+
         vector<Ingredient> getIngredients() {
             return myFridge;
         }

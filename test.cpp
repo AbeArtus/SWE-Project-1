@@ -2,40 +2,29 @@
 #include <iostream>
 
 #include "Fridge.h"
+#include "Recipe.h"
 
 
 
 int main(){
- ////////////////////////
- // Directory Creating //
- ////////////////////////
 
- /*
-   string dir = "test";
-    struct stat info;
-    if(stat(dir.c_str(), &info) != 0) {
-        mkdir(dir.c_str(), S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
-    }
-*/
-    /*
-    ofstream outfile;
-    outfile.open("test/abeartus.txt");
-    outfile << "abeartus" << endl << "SWEproj00";
-    outfile.close();
-*/
+    //######################//
+    //# Ingredient Testing #//
+    //######################//
 
+    // Stub...
+    // No Tests found
+    // I mean it works though
 
-
-//#########################//
-//# Fridge search testing #//
-//#########################//
+    //#########################//
+    //# Fridge search testing #//
+    //#########################//
 
     Fridge myfrg = Fridge("abeartus");
     cout << myfrg.getString();
 
     Ingredient banana = Ingredient("banana", 1);
     cout << "banana index: " << myfrg.searchItem(banana) <<" \n";
-    
 
     Ingredient corn = Ingredient("corn", 1);
     cout << "corn index: " << myfrg.searchItem(corn) <<" \n";
@@ -76,6 +65,37 @@ int main(){
     myfrg.addIngredient(ezg);
     myfrg.addIngredient(date);
     cout << myfrg.getString();
+
+
+    //#################################//
+    //# Example of saving a user file #//
+    //#################################//
+
+    string usrname = "abeartus";
+    string psswrd = "SWEproj00";
+
+    // Open an out file to overwrite/create a new file for the current user info and fridge
+    ofstream outfile;
+    outfile.open("usr/abeartus.txt");
+
+    outfile << usrname << endl 
+            << psswrd << endl 
+            << "banana 3\ncorn 3\negg 2\nmilk 2 gallon" << endl;
+    
+    outfile.close();
+
+    //##################//
+    //# Recipe Testing #//
+    //##################//
+    
+    Recipe Cookie_Bars = Recipe("Chocolate_Chip_Cookie_Bars","Snack");
+    cout << Cookie_Bars.getDescription() ;
+
+    // ... need more testing for Recipe
+
+
+
+
 
     return 0;
 }
