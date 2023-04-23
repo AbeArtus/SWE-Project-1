@@ -7,15 +7,15 @@ Chicken Ramen
 The quintessential easy college meal is packaged ramen noodles. They're cheap, tasty, and take about 30 seconds to make. These versions are even more flavorful--and nutritious! courtesy of extra ingredients and a few minutes of prep.
 #
 Cooking spray
-1 pound chicken breast, cut into strips
-3 cups chicken broth
-1 cup shredded carrots
-3 green onions, sliced
-1 teaspoon salt, or to taste
-1 teaspoon ground black pepper
-⅓ cup golden raisins
-¼ cup sliced almonds
-8 ounces rice noodles
+Chicken_Breast_Cut_Into_Strips  1.0 Pound
+Chicken_Broth 3.0 Cups
+Carrots_Shredded 1.0 Cup
+Green_Onions, Sliced 3.0
+Salt 1.0 Teaspoon
+Ground_Black_Pepper 1.0 Teaspoon
+Golden_Raisins 0.33 Cups
+Almonds_Sliced 0.25 cups
+Rice_Noodles 8.0 Ounces
 #
 1. Spray a medium frying pan with cooking spray. Add
 chicken to pan and cook over medium heat for 6 minutes. Flip chicken and cook for an additional 6 minutes. Turn off heat and set aside.

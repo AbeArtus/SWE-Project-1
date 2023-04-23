@@ -6,15 +6,15 @@ Egg Salad Sandwich
 #
 Often you won't have enough time between classes to go back to your room or to the dining hall for a bite to eat. This problem is easily solved by packing it to go.
 #
-2 hard-boiled eggs, sliced
-1 tablespoon minced onion 
-1 tablespoon relish
-Pinch of salt
-Pinch of ground black pepper
-1 tablespoon mayonnaise
-1 leaf romaine lettuce
-2 slices whole wheat bread
-2 slices cheese
+Hard_Boiled_Eggs_Sliced 1.0
+Minced_Onion  1.0 Tablespoon
+Relish 1.0 Tablespoon
+Salt
+Ground_Black_Pepper
+Mayonnaise 1.0 Tablespoon
+Romaine_Lettuce 1.0 Leaf
+Bread 2.0 Slices
+Cheese 2.0 Slices
 #
 1. In a small bowl, mash eggs. Add onion, relish, salt, pepper, and mayonnaise. Mix until well combined.
 

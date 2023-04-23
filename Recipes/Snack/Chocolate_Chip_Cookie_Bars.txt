@@ -7,16 +7,15 @@ Chocolate Chip Cookie Bars
 Everyone loves chocolate chip cookies. This recipe cuts down on the time spent spooning and roll-ling dough into individual portions. All the dough is baked in a pan and then cut into bars.
 #
 Baking spray
-1½ cups all-purpose flour
-½ teaspoon baking powder
-½ teaspoon salt
-½ cup (1 stick) salted butter or margarine,
-softened
-½ cup granulated sugar
-½ cup packed light brown sugar
-1 egg
-1 teaspoon vanilla extract
-1 cup chocolate chips
+Flour 1.5 Cups
+Baking_Powder 0.5 Teaspoon
+Salt 0.5 Teaspoon
+Salted_Butter 0.5 Cups
+Granulated_Sugar 0.5 Cups
+Light_Brown_Sugar 0.5 Cups
+Egg 1.0
+Vanilla_Extract 1.0 Teaspoon
+Chocolate_Chips 1.0 Cup
 #
 1. Preheat the oven to 350°F and position a rack in the center of the oven. Spray a 9-inch square baking pan with baking spray 
 

@@ -5,11 +5,12 @@ Chicken Apple Salad
 5 minutes
 #
 Raisins, apples, honey--this salad is practically a dessert. In fact, offer your friends a dessert salad and see what they say, just for science.
-¼ head lettuce
-1 cup chopped cooked chicken
-¼ cup raisins
-½ cup apple slices
-Honey Mustard Dressing (page 67) to taste
+#
+Lettuce 0.25 Lettuce
+Cooked_Chicken 1.0 Cup
+Raisins 0.25 Cups
+Apple_Slices 0.5 Cups
+Honey_Mustard_Dressing
 #
 1. Wash and dry lettuce (see page 66). With clean hands or a knife, tear or cut lettuce into bite-sized pieces. Place in a salad bowl.
 

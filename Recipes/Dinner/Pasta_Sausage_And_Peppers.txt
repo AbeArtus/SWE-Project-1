@@ -5,11 +5,15 @@ Pasta, Sausage, and Peppers
 90 minutes
 #
 This quick meal will satisfy even the pickiest of roommates, and it's easy to customize for different palates (it can even be vegetarian). Start by substituting one of the combinations below for the sausage and peppers.
-1 pound dried pasta such as ziti, penne, or rotini ¼ cup plus 2 tablespoons olive oil, divided 1 pound sausage links
-1 teaspoon minced garlic
-2 large bell peppers, sliced
-1 medium onion, sliced ½ cup grated Parmesan cheese
-Salt to taste
+#
+Pasta 1.0 Pound
+Olive_Oil 0.33 Tablespoon
+Sausage_Links 1.0 Pound
+Minced_Garlic 1.0 Teaspoon
+Bell_Pepper_Sliced 2.0
+Onion_Sliced 1.0
+Parmesan_Cheese_Grated 0.5 Cups
+Salt
 #
 1. In a large frying pan over medium heat, warm 1 tablespoon of the oil for 1 minute. Add sausage and cook, turning occasionally with tongs, until browned on all sides. When the internal temperature reaches 160°F, transfer sausage to a plate to let it cool
 

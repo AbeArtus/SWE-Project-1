@@ -6,16 +6,16 @@ Italian Hoagie
 #
 This Philadelphia lunch staple will keep you going through a busy afternoon.
 #
-1 long sandwich roll
-1 tablespoon mayonnaise
-3 slices provolone cheese
-3 slices salami
-3 slices peppered ham
-3 slices sandwich-size pepperoni
-½ cup shredded lettuce
-¼ cup very thinly sliced onions
-1 tablespoon olive oil
-Pinch of oregano
+Sandwich_Roll 1.0
+Mayonnaise 1.0 Tablespoon
+Provolone_Cheese 3.0 Slices
+Salami 3.0 Slices
+Peppered_Ham 3.0 Slices
+Pepperoni 3.0 Slices
+Lettuce_Shredded 0.5 Cups
+Onions_Sliced 0.25 Cups
+Olive_Oil 1.0 Tablespoon
+Oregano
 #
 1. With a serrated knife, slice the roll lengthwise about three-quarters of the way through. Open the roll and spread a thin layer of mayonnaise inside.
 

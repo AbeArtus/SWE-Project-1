@@ -6,12 +6,12 @@ Buffalo Chicken Sandwich
 #
 If you wish the spirit of Saturday football games could be with you all week long, try this sandwich.
 #
-2 tablespoons cream cheese, softened
-1 tablespoon buffalo wing sauce
-1 5-ounce can chunk white chicken in water, drained, or ½ cup chopped cooked chicken
-1 round roll
-2 slices mozzarella cheese
-1 leaf romaine lettuce
+Cream_Cheese_Softened 2.0 Tablespoons
+Buffalo_Wing_Sauce 1.0 Tablespoon
+Cooked_Chicken 0.5 Cups
+Round_Roll 1.0
+Mozzarella_Cheese 2.0 Slices
+Romaine_Lettuce 1.0 Leaf
 #
 1. Place softened cream cheese and sauce in a medium-sized bowl. Mix until well combined.
 

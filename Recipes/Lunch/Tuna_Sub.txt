@@ -6,15 +6,15 @@ Tuna Sub
 #
 Is this incredible sandwich a sub, hoagie, hero, or grinder? The answer depends on your location; most of its names are regional. Whatever you call it, a sandwich of tasty fillings in a long roll makes an excellent meal
 #
-1 5-ounce can tuna in water, drained (see Tip)
-1 tablespoon minced onion
-¼ cup minced celery
-Pinch of salt
-Pinch of ground black pepper
-1 tablespoon mayonnaise
-1 long sandwich roll
-1 leaf romaine lettuce
-2 slices cheese
+Tuna 1.0 Can
+Onion_minced  1.0 Tablespoon
+Celery_Minced 0.25 Cups
+Salt
+Ground_Black_Pepper
+Mayonnaise 1.0 Tablespoon
+Sandwich_Roll 1.0
+Romaine_Lettuce 1.0 Leaf
+Cheese 2.0 Slices
 #
 1. Place tuna in a small bowl. With a fork, flake it into small pieces. Add onion, celery, salt, pepper, and mayonnaise. Mix until combined.
 

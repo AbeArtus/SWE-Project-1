@@ -6,11 +6,11 @@ Hummus and Veggie Wraps
 #
 These two ingredients make a great healthy snack. Wrap them up for an easy-to-transport option for when you're on the go.
 #
-1 green bell pepper
-½ onion
-1 cup mushrooms
-2 tortillas
-½ cup hummus
+Green_Bell_Pepper 1.0
+Onion 0.5
+Mushrooms 1.0 Cup
+Tortillas 2.0
+Hummus 0.5 Cup
 #
 1. With a sharp knife, slice the top and bottom off the pepper. Carefully cut out seeds and discard them.
 Slice pepper into strips.

@@ -7,13 +7,13 @@ Taco Wrap
 Everyone loves tacos. Meat, cheese, and salsa-what could be better?
 Cooking spray
 #
-½ pound lean ground beef or other ground meat
-2 tablespoons (½ packet) taco seasoning
-2 tortillas
-⅔ cup shredded cheddar cheese
-3 tablespoons salsa
-3 tablespoons sour cream
-1 cup shredded lettuce
+Lean_Ground_Beef 0.5 Pounds
+Taco_Seasoning 2.0 Tablespoons
+Tortillas 2.0
+Shredded_Cheddar_Cheese 0.66 Cups
+Salsa 3.0 Tablespoons
+Sour_Cream 2.0 Tablespoons
+Shredded_lettuce 1.0 Cup
 #
 1. Coat a medium-sized skillet with cooking spray and heat over medium heat for 1 minute.
 

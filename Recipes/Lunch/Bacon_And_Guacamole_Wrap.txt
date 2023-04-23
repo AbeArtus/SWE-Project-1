@@ -6,10 +6,10 @@ Bacon and Guacamole Wrap
 #
 Avocado: incredibly healthy. Bacon: not so healthy. Avocado and bacon together: incredibly delicious.
 #
-½ cup guacamole
-1 tortilla
-3 slices pepper jack cheese
-3 slices cooked bacon (see page 40), cooled
+Guacamole 0.5 Cups
+Tortilla 1.0
+Pepper_Jack_Cheese 3.0 Slices
+Bacon_Cooked 3.0 Slices
 #
 1. Spread guacamole on tortilla. Layer cheese on top of guacamole.
 

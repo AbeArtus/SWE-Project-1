@@ -6,14 +6,14 @@ Chicken Salad Sandwich
 #
 This is a great use for leftover cooked chicken breast.
 #
-1 5-ounce can chunk white chicken in water, drained, or " cup chopped cooked chicken
-½ cup minced celery
-Pinch of salt
-Pinch of paprika
-1 tablespoon mayonnaise
-2 slices raisin bread
-2 slices provolone cheese
-¼ medium-sized apple, thinly sliced
+White_Chicken 1.0 Can
+Celery_Minced 0.5 Cups
+Salt
+Paprika
+Mayonnaise 1.0 Tablespoon
+Raisin_Bead 2.0 Slices
+Provolone_Cheese 2.0 Slices
+Apple 0.25
 #
 1. Place chicken in a small bowl. Add celery, salt, pa-prika, and mayonnaise, Mix until combined.
 
