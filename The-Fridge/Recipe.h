@@ -49,7 +49,8 @@ class Recipe {
                 if (str[i] == a) 
                     str[i] = b;
                 return str;
-            } 
+            }
+            return str;
         }
 
         // this function is for adding to the -list.txt file to easily access the recipes in a dir.

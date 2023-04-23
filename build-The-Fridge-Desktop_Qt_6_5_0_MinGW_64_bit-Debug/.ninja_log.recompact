@@ -1,0 +1,11 @@
+# ninja log v5
+529	1926	7039720578184613	CMakeFiles/The-Fridge.dir/mainwindow.cpp.obj	fa36393be53f0a1f
+4	463	7039731551551675	C:/Users/Ube/Documents/GitHub/SWE-Project-1/build-The-Fridge-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/The-Fridge_autogen/timestamp	ca12203e2561b694
+4	463	7039731551551675	The-Fridge_autogen/timestamp	ca12203e2561b694
+4	463	7039731551551675	The-Fridge_autogen/mocs_compilation.cpp	ca12203e2561b694
+4	463	7039731551551675	C:/Users/Ube/Documents/GitHub/SWE-Project-1/build-The-Fridge-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/The-Fridge_autogen/mocs_compilation.cpp	ca12203e2561b694
+520	1661	7039720575534624	CMakeFiles/The-Fridge.dir/main.cpp.obj	e3d3fbd75d299f24
+522	1702	7039720575934652	CMakeFiles/The-Fridge.dir/The-Fridge_autogen/mocs_compilation.cpp.obj	1d2179ab13f181da
+1927	2048	7039720579364600	The-Fridge.exe	860e881bfc3b93a2
+526	1805	7039720576974613	CMakeFiles/The-Fridge.dir/login.cpp.obj	ba516d80828e95b3
+3	406	7039731547271680	build.ninja	320e20a4d61506b2
