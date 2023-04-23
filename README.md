@@ -6,7 +6,9 @@ Final project for the SWE class: "The fridge app"
 ### For Unit Testing
 
 https://cmake.org/download/
+
 CMake Tools from VS Code Marketplace
+
 git clone https://github.com/google/googletest.git (into main directory, CMakeList.txt file will need to find this folder)
 
 
