@@ -6,12 +6,12 @@ Chicken Salad Sandwich
 #
 This is a great use for leftover cooked chicken breast.
 #
-White_Chicken 1.0 Can
-Celery_Minced 0.5 Cups
+White_Chicken_Canned 1.0
+Celery_Minced 120.0 g
 Salt
 Paprika
-Mayonnaise 1.0 Tablespoon
-Raisin_Bead 2.0 Slices
+Mayonnaise 14.4 g
+Raisin_Bread 2.0 Slices
 Provolone_Cheese 2.0 Slices
 Apple 0.25
 #

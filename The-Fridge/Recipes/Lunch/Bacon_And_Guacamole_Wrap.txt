@@ -6,7 +6,7 @@ Bacon and Guacamole Wrap
 #
 Avocado: incredibly healthy. Bacon: not so healthy. Avocado and bacon together: incredibly delicious.
 #
-Guacamole 0.5 Cups
+Guacamole 50.0 g
 Tortilla 1.0
 Pepper_Jack_Cheese 3.0 Slices
 Bacon_Cooked 3.0 Slices

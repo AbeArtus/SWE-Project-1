@@ -9,11 +9,11 @@ Make this breakfast wrap on mornings when you're in a hurry and don't have time 
 Cooking_Spray
 Salt
 Ground_Pepper
-Frozen_Diced_Potatoes_with_onion_and_peppers 1 cup
-Canola_oil 2
+Frozen_Diced_Potatoes_with_onion_and_peppers 129.85 g
+Canola_oil 9.34 g
 Egg 4
-Shredded_chedddar_cheese .33 cup
-Salsa .25 cup 
+Shredded_Chedddar_Cheese 40.0 g
+Salsa 56.6 cup
 Tortilla 2
 #
 On the Stove:
@@ -21,7 +21,7 @@ On the Stove:
 
 2. carefully add frozen vegetables in an even layer, cover and cook, turning with a spatula every 2 to 3 minutes, for a total of 7 to 10 minutes, until light golden brown. Transfer to a bowl
  
-3. Wipe the pan with papertowels and coat again with cooking spray
+3. Wipe the pan with paper towels and coat again with cooking spray
 
 4. in a bowl, whisk eggs with sal and pepper. add to skillet and scramble.
 

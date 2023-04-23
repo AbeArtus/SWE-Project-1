@@ -6,13 +6,13 @@ Pasta, Sausage, and Peppers
 #
 This quick meal will satisfy even the pickiest of roommates, and it's easy to customize for different palates (it can even be vegetarian). Start by substituting one of the combinations below for the sausage and peppers.
 #
-Pasta 1.0 Pound
-Olive_Oil 0.33 Tablespoon
-Sausage_Links 1.0 Pound
-Minced_Garlic 1.0 Teaspoon
-Bell_Pepper_Sliced 2.0
+Pasta 453.592 g
+Olive_Oil 28.0 g
+Sausage_Links 138.0 g
+Minced_Garlic 2.81 g
+Bell_Pepper_Sliced 2.0 g
 Onion_Sliced 1.0
-Parmesan_Cheese_Grated 0.5 Cups
+Parmesan_Cheese_Grated 50.0 g
 Salt
 #
 1. In a large frying pan over medium heat, warm 1 tablespoon of the oil for 1 minute. Add sausage and cook, turning occasionally with tongs, until browned on all sides. When the internal temperature reaches 160°F, transfer sausage to a plate to let it cool

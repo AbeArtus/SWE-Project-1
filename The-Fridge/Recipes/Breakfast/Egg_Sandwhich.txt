@@ -6,7 +6,7 @@ Egg Sandwich
 #
 When your stomach is rumbling loud enough for the professor to hear, you'll realize that Mom was right: Breakfast really is the most important meal of the day. With this recipe you can make your stomach happy in less than five minutes.
 #
-Cooking_spray
+Cooking spray
 Egg 1
 Salt
 Ground_Black_Pepper

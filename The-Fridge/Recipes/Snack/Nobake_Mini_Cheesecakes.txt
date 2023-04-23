@@ -6,11 +6,11 @@ No-Bake Mini Cheesecakes
 #
 No-bake and cheesecake are two of our favorite words. Put them together and you have this tasty treat that is delicious on its own as well as the perfect companion to your favorite toppings.
 #
-Cream_Cheese_Softened 4.0 Ounces
-Whipped_Topping 4.0 Ounces
-Sour_Cream_Room_Temperature  0.5 Cup
-Granulated_Sugar  0.75 Cup
-Vanilla_Extract 1.0 Teaspoon
+Cream_Cheese_Softened 115.0 g
+Whipped_Topping 72.0 g
+Sour_Cream_Room_Temperature  123.0 g
+Granulated_Sugar  150.0 g
+Vanilla_Extract 4.2 g
 Vanilla_Wafers 6.0
 Strawberries 6.0
 #
