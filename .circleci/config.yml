@@ -16,5 +16,6 @@ jobs:
       - run:
           name: Build and run C++ code
           command: |
+          cd The-Fridge
             g++ -o test test.cpp
-            ./test
+            ./test 
