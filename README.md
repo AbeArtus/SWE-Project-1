@@ -26,22 +26,32 @@ Final project for the SWE class: "The fridge app"
 ### Persistent Data
 
 #### Userfile / fridge file
+
 <p>The username, password, and fridge items are all stored in the usr file in the directory</p>
+
 <p>
 ~/usr
 </p>
-<p>The file name will be the username<br>
-EX: username.txt</p>
+
+<p>
+The file name will be the username<br>
+EX: username.txt
+</p>
 
 With the file format of:
+
 <p>
 [username]<br>
 [password]<br>
 [Ingredients]<br>
 </p>
+
 #### Recipe Files and Directory Structure
 
-<p>The Directory files are stored inside of the directories:</p>
+<p>
+The Directory files are stored inside of the directories:
+</p>
+
 <p>
 ~/Recipes/Breakfast/...<br>
 ~/Recipes/Lunch/...<br>
