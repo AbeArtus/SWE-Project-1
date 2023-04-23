@@ -145,7 +145,7 @@ class Fridge {
 };
 */
 
-int main(){
+
 
 
  ////////////////////////
@@ -188,8 +188,8 @@ int main(){
     Ingredient date = Ingredient("zate", 1);
     cout << "zear idx: " << myfrg.searchItem(date) << "\n"; 
 
-*/
+
     return 0;
 };
-
+*/
 

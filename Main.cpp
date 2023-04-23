@@ -5,6 +5,7 @@
 
 
 
+
 int main(){
  ////////////////////////
  // Directory Creating //
@@ -30,7 +31,10 @@ int main(){
 //# Fridge search testing #//
 //#########################//
 
+
+
     Fridge myfrg = Fridge("abeartus");
+
     cout << myfrg.getString();
 
     Ingredient banana = Ingredient("banana", 1);

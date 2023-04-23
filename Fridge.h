@@ -113,6 +113,71 @@ class Fridge {
         int searchItem(Ingredient item) {
             return searchItemHelper(item, 0 , myFridge.size() -1);
         }
+
+
+        // CONVERSION
+
+        void Convert(int amount, string unit, string type){
+
+
+
+            string liquidStr= "liquid";
+            string cup = "cups";
+            string gal = "gallons";
+            string tsp = "teaspoon";
+            string tbsp = "tablespoon";
+
+            string dryStr= "dry";
+
+            if (dryStr.compare(type)==0){
+                // 1 tbs = 3 tsp
+                // 1 cup = 16 tbsp
+                // 0.0625 = 1 tbsp
+
+                if (unit.compare(cup)==0){
+                    // 1 cup = 48 tsp
+
+                    int measurement = amount * 48;
+                    string newUnit = "teaspoon";
+                    if (measurement > 3) {
+                        // 3 tsp = 1 tbsp
+                        // convert to tbsp and round to nearest whole number
+                        measurement = round(measurement / 3);
+                        newUnit= "tablespoon";
+
+                    }
+                }
+            }// end dry string compare
+
+            if (liquidStr.compare(type)==0){
+                if (unit.compare(gal)==0){
+                    // 1 gal = 16 cups
+                    int measurement = amount / 16;
+                    string newUnit = "cups";
+                    //if there is less than 1 cup
+                    if (measurement < 1){
+                        measurement = measurement * 16;
+                        newUnit = "fl oz";
+
+                        // if there is less than 1 fl convert to tbsp / tsp
+                        if (measurement < 1){
+                            measurement = measurement * 2;
+                            newUnit = "tablespoon";
+                        }
+                    }
+                }
+
+            } // end liquid string compare
+
+        }
+        // Liquids
+
+        // Dry
+
+
+
+
+
 };
 
 #endif // FRIDGE_H

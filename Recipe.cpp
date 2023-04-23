@@ -104,12 +104,16 @@ class Recipe {
     
     string replace(string str, char a, char b) {
         for (int i = 0; str[i] != '\0'; i++) {
-        if (str[i] == a) 
-            str[i] = b;
-        return str;
+            if (str[i] == a) {
+                str[i] = b;
+            }
         }
+            return str;
+
+
         
     }
+
 
     void updatelist(string name, string RecipeDir) {
 
@@ -198,6 +202,8 @@ class Recipe {
 };
 
 
+
+/*
     int main() {
         Recipe recipe = Recipe("Breakfast_Burritos", "Breakfast");
         cout << recipe.getString();
@@ -205,3 +211,4 @@ class Recipe {
         recipe.updatelist(recipe.name, "Breakfast");
         return 0;
     }
+*/

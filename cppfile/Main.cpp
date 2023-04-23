@@ -3,13 +3,13 @@
 #include <iostream>
 #include "Fridge.h"
 
-
+/*
 int main(){
  ////////////////////////
  // Directory Creating //
  ////////////////////////
 
- /*
+
    string dir = "test";
     struct stat info;
     if(stat(dir.c_str(), &info) != 0) {
@@ -21,7 +21,7 @@ int main(){
     outfile.close();
 */
 
-
+/*
 //#########################//
 //# Fridge search testing #//
 //#########################//
@@ -49,3 +49,4 @@ int main(){
 }
 
 
+*/
