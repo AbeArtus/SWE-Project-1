@@ -1,0 +1,27 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/cpp:latest
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            # Install any dependencies your project needs, e.g. libraries or headers
+      - run:
+          name: Configure project with CMake
+          command: |
+            mkdir build
+            cd build
+            cmake ..
+      - run:
+          name: Build project
+          command: |
+            cd build
+            make
+      - run:
+          name: Run tests
+          command: |
+            cd build
+            make test
