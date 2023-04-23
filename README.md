@@ -2,6 +2,10 @@
 Final project for the SWE class: "The fridge app"
 
 
+## Dependencies 
+https://cmake.org/download/
+CMake Tools from VS Code Marketplace
+
 
 ## Requirements
 
