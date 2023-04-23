@@ -213,6 +213,7 @@ class Recipe {
             for (int i = 0; i < Ingredients.size();i++) {
                 out.append(Ingredients[i].getText());
             }
+            return out;
         }
 
         vector<Ingredient> getIngredients(){
