@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Ube/Documents/GitHub/SWE-Project-1/The-Fridge
+# Install script for directory: C:/Users/Zanel/OneDrive/Desktop/SE/Project/SWE-Project-1/The-Fridge
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Users/Ube/Documents/GitHub/SWE-Project-1/build-The-Fridge-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/The-Fridge.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/Users/Zanel/OneDrive/Desktop/SE/Project/SWE-Project-1/build-The-Fridge-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/The-Fridge.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/The-Fridge.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/The-Fridge.exe")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -55,5 +55,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Ube/Documents/GitHub/SWE-Project-1/build-The-Fridge-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Zanel/OneDrive/Desktop/SE/Project/SWE-Project-1/build-The-Fridge-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

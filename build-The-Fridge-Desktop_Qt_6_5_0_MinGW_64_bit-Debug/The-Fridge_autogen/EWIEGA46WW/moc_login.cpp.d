@@ -1,5 +1,5 @@
-C:/Users/Ube/Documents/GitHub/SWE-Project-1/build-The-Fridge-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/The-Fridge_autogen/EWIEGA46WW/moc_login.cpp: C:/Users/Ube/Documents/GitHub/SWE-Project-1/The-Fridge/login.h \
-  C:/Users/Ube/Documents/GitHub/SWE-Project-1/build-The-Fridge-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/The-Fridge_autogen/moc_predefs.h \
+C:/Users/Zanel/OneDrive/Desktop/SE/Project/SWE-Project-1/build-The-Fridge-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/The-Fridge_autogen/EWIEGA46WW/moc_login.cpp: C:/Users/Zanel/OneDrive/Desktop/SE/Project/SWE-Project-1/The-Fridge/login.h \
+  C:/Users/Zanel/OneDrive/Desktop/SE/Project/SWE-Project-1/build-The-Fridge-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/The-Fridge_autogen/moc_predefs.h \
   C:/Qt/6.5.0/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.5.0/mingw_64/include/QtCore/q20type_traits.h \
   C:/Qt/6.5.0/mingw_64/include/QtCore/qalgorithms.h \
