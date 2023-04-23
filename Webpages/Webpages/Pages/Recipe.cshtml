@@ -4,40 +4,16 @@
     ViewData["Title"] = "Recipe";
 }
 
-<h1>Breakfast Burritos</h1>
-    <p>Make this breakfast wrap on mornings when you're in a hurry and don't have time to sit and eat. Even better. Make it a night before and pop it in the microwave for about 30 sec.</p>
+<h1>@Model.recipe.Name</h1>
+    <p>@Model.recipe.Description</p>
 <hr>
 <h2>Ingredients</h2>
 <div>
-    1 Cooking_Spray<br>
-    1 Frozen_Diced_Potatoes_with_onion_and_peppers cup<br>
-    2 Canola_oil<br>
-    4 egg<br>
-    1 Salt pinch<br>
-    1 ground_pepper pinch<br>
-    1/3 shredded_chedddar_cheese<br>
-    1/4 salsa cup<br>
-    2 tortilla<br>
+    @foreach (var i in @Model.recipe.Ingredients)
+    {
+        @i<br/>
+    }
 </div>
 <hr>
-<h2>To Cook:</h2>
-<h4>On the Stove:</h4>
-<ol>
-    <li>Coat a medium-sized skillet with cooking spray and heat over medium-high heat for about 1 1/2 minutes.</li>
-    <li>Carefully add frozen vegetables in an even layer, cover and cook, turning with a spatula every 2 to 3 minutes, for a total of 7 to 10 minutes, until light golden brown. Transfer to a bowl.</li>
-    <li>Wipe the pan with papertowels and coat again with cooking spray.</li>
-    <li>In a bowl, whisk eggs with salt and pepper. add to skillet and scramble.</li>
-</ol>
-<h4>In the Microwave:</h4>
-<ol>
-    <li>place frozen vegetables in a microwave-safe bowl. Add canola oil salt, and pepper. Toss with a spoon until vegetables are evenly coated.</li>
-    <li>cover bowl with plastic wrap and punch a hole in the middle of the plastic with a knife or your finger.</li>
-    <li>Microwave on high for 10 minutes. Set aside</li>
-    <li>Place eggs in a microwave safe bowl. scramble eggs in the microwave.</li>
-</ol>
-
-<h2>To assemble:</h2>
-<ol>
-    <li>In the center of each tortilla, layer half of the eggs, vegetables, cheese.</li>
-</ol>
+@Model.recipe.Directions
 
