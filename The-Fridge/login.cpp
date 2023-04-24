@@ -58,7 +58,7 @@ void login::on_loginButton_clicked()
             //If successfu
             if(password == keyword){
                 hide();
-                mainWindow = new MainWindow(this);
+                mainWindow = new MainWindow(this, username);
                 mainWindow->show();
             }
         }

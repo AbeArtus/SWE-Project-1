@@ -3,7 +3,6 @@
 #include <QDir>
 #include <QFile>
 #include <QMessageBox>
-#include "ui_login.h"
 
 signup::signup(QWidget *parent) :
     QDialog(parent),
