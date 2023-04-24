@@ -21,10 +21,12 @@ int main(){
     //#########################//
 
     Fridge myfrg = Fridge("abeartus");
-    cout << myfrg.getString();
 
     Ingredient banana = Ingredient("banana", 1);
-    cout << "banana index: " << myfrg.searchItem(banana) <<" \n";
+    if (myfrg.searchItem(banana) != 0){
+        cout << "error code 1" << "\n";
+        return -1;
+    }
 
     Ingredient corn = Ingredient("corn", 1);
     cout << "corn index: " << myfrg.searchItem(corn) <<" \n";
@@ -97,7 +99,7 @@ int main(){
 
 
 
-    return -1;
+    return 0;
 }
 
 
