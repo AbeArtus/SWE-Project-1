@@ -16,11 +16,11 @@ Final project for the SWE class: "The fridge app"
 
 [  ]  Some portion of the software product’s functionality must be packaged and accessed as a web service hosted from an Internet-accessible hosting service (of which many free services exist and can be used).
 
-[  ]  Some portion of the software product’s functionality must be only accessible after user has authenti- cated themselves to the software product via either a custom authentication system (i.e., the software stores usernames and passwords such that the user must enter a correct pair of username and password  data) or a third-party integrated authentication system (e.g., Google account). It may be that some functionality is accessible without authentication or the software knowing the identity of the user.
+[ x ]  Some portion of the software product’s functionality must be only accessible after user has authenti- cated themselves to the software product via either a custom authentication system (i.e., the software stores usernames and passwords such that the user must enter a correct pair of username and password  data) or a third-party integrated authentication system (e.g., Google account). It may be that some functionality is accessible without authentication or the software knowing the identity of the user.
 
 [ ] The software product must have a graphical user interface (GUI) using whatever GUI framework or toolkit the group prefers
 
-[  ] The software product development lifecycle must have some form of continuous integration and executable testing such that on commit or push to GitHub some automated actions are taken to compile / build and execute tests to ensure new changes have not broken functionality (which is tested, anyway).
+[ x ] The software product development lifecycle must have some form of continuous integration and executable testing such that on commit or push to GitHub some automated actions are taken to compile / build and execute tests to ensure new changes have not broken functionality (which is tested, anyway).
 
 ## Project specifications
 
