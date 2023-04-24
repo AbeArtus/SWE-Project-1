@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLineEdit" name="usernamelineEdit">
+  <widget class="QLineEdit" name="signupUsername">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -23,7 +23,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="passwordlineEdit_2">
+  <widget class="QLineEdit" name="signupPassword">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -33,7 +33,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="password2lineEdit_3">
+  <widget class="QLineEdit" name="signupConfirmpwd">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -112,20 +112,17 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QPushButton" name="signupButton">
    <property name="geometry">
     <rect>
-     <x>48</x>
-     <y>250</y>
-     <width>291</width>
-     <height>20</height>
+     <x>150</x>
+     <y>260</y>
+     <width>101</width>
+     <height>24</height>
     </rect>
    </property>
    <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <string>Signup</string>
    </property>
   </widget>
  </widget>
