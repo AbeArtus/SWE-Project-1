@@ -3,11 +3,44 @@
 @{
     ViewData["Title"] = "Recipe";
 }
-@foreach (var i in @Model.filePaths)
-{
-    <a href="Recipe?handler=viewRecipe&recipeName=@i" type="nav-link">@System.IO.Path.GetFileName(@i)</a><br/>
-}
-<hr>
+
+@*sidebar*@
+<div class="sidenav">
+    @foreach (var i in @Model.filePaths)
+    {
+        if (!i.Contains("list"))
+        {
+            <a href="Recipe?handler=viewRecipe&recipeName=@i" type="nav-link">@System.IO.Path.GetFileName(@i).Replace(".txt", "").Replace("_", " ")</a>
+        }
+
+        <br />
+    }
+</div>
+
+<style>
+    .sidenav {
+        height: 100%;
+        width: auto;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #818181;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #f1f1f1;
+            display: block;
+        }
+
+</style>
+
+@*recipe*@
 <h1>@Model.recipe.Name</h1>
     <p>@Model.recipe.Description</p>
 <hr>
