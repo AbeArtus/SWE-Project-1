@@ -57,6 +57,7 @@ void login::on_loginButton_clicked()
             file.close();
             //If successfu
             if(password == keyword){
+                QMessageBox::warning(this, "Login", "Login Successful");
                 hide();
                 mainWindow = new MainWindow(this, username);
                 mainWindow->show();

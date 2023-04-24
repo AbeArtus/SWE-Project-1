@@ -41,13 +41,12 @@ class Fridge {
 
     public:
     
-        Fridge(string USERFILENAME) {
-            ifstream infile("usr/"+USERFILENAME+".txt");
+        Fridge(string fileDirectory) {
+            ifstream infile(fileDirectory);
             if (!infile.is_open()){
                 cout 
                     << "Error opening file: " 
-                    << USERFILENAME << ".txt" 
-                    << " in ~/usr" << endl;
+                    << fileDirectory << endl;
                 return;
             }
             string line;

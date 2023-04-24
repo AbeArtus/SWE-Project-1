@@ -14,16 +14,6 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>60</y>
-      <width>321</width>
-      <height>441</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QListView" name="listView">
     <property name="geometry">
      <rect>
@@ -82,6 +72,32 @@
     <property name="text">
      <string>cook</string>
     </property>
+   </widget>
+   <widget class="QTableWidget" name="fridgeTable">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>61</y>
+      <width>281</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>New Column</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Count</string>
+     </property>
+    </column>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
