@@ -23,7 +23,7 @@ int main(){
     Fridge myfrg = Fridge("abeartus");
 
     Ingredient banana = Ingredient("banana", 1);
-    if (myfrg.searchItem(banana) != 1){
+    if (myfrg.searchItem(banana) != 0){
         cout << "error code 1" << "\n";
         return -1;
     }
