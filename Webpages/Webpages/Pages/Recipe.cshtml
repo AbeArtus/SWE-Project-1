@@ -3,7 +3,11 @@
 @{
     ViewData["Title"] = "Recipe";
 }
-
+@foreach (var i in @Model.filePaths)
+{
+    <a href="Recipe?handler=viewRecipe&recipeName=@i" type="nav-link">@System.IO.Path.GetFileName(@i)</a><br/>
+}
+<hr>
 <h1>@Model.recipe.Name</h1>
     <p>@Model.recipe.Description</p>
 <hr>
@@ -15,5 +19,14 @@
     }
 </div>
 <hr>
-@Model.recipe.Directions
+
+@foreach (var i in @Model.recipe.Directions)
+{
+    @i<br />
+}
+
+@*@foreach (var i in @Model.filecontent)
+{
+    @i<br />
+}*@
 
