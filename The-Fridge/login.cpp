@@ -59,8 +59,11 @@ void login::on_loginButton_clicked()
             if(password == keyword){
                 QMessageBox::warning(this, "Login", "Login Successful");
                 hide();
-                mainWindow = new MainWindow(this, username);
+                mainWindow = new MainWindow(nullptr, username);
                 mainWindow->show();
+            }
+            if (password != keyword){
+                QMessageBox::warning(this, "Login", "username or password is incorrect");
             }
         }
     }
