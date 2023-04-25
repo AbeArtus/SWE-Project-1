@@ -1,9 +1,0 @@
-/Users/jennifernguyen/Documents/SWE-Project-1/SWE-Project-1/build-The-Fridge-Qt_6_5_0_for_macOS-Debug/CMakeFiles/The-Fridge.dir
-/Users/jennifernguyen/Documents/SWE-Project-1/SWE-Project-1/build-The-Fridge-Qt_6_5_0_for_macOS-Debug/CMakeFiles/edit_cache.dir
-/Users/jennifernguyen/Documents/SWE-Project-1/SWE-Project-1/build-The-Fridge-Qt_6_5_0_for_macOS-Debug/CMakeFiles/rebuild_cache.dir
-/Users/jennifernguyen/Documents/SWE-Project-1/SWE-Project-1/build-The-Fridge-Qt_6_5_0_for_macOS-Debug/CMakeFiles/list_install_components.dir
-/Users/jennifernguyen/Documents/SWE-Project-1/SWE-Project-1/build-The-Fridge-Qt_6_5_0_for_macOS-Debug/CMakeFiles/install.dir
-/Users/jennifernguyen/Documents/SWE-Project-1/SWE-Project-1/build-The-Fridge-Qt_6_5_0_for_macOS-Debug/CMakeFiles/install/local.dir
-/Users/jennifernguyen/Documents/SWE-Project-1/SWE-Project-1/build-The-Fridge-Qt_6_5_0_for_macOS-Debug/CMakeFiles/install/strip.dir
-/Users/jennifernguyen/Documents/SWE-Project-1/SWE-Project-1/build-The-Fridge-Qt_6_5_0_for_macOS-Debug/CMakeFiles/The-Fridge_autogen_timestamp_deps.dir
-/Users/jennifernguyen/Documents/SWE-Project-1/SWE-Project-1/build-The-Fridge-Qt_6_5_0_for_macOS-Debug/CMakeFiles/The-Fridge_autogen.dir
