@@ -7,7 +7,6 @@
 #include <fstream>
 #include "Ingredient.h"
 #include <iostream>
-#include <QDir>
 #include <QCoreApplication>
 
 
