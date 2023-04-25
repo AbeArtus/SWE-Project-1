@@ -23,11 +23,24 @@
       <height>541</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout" columnstretch="1,4,6">
-     <item row="5" column="2">
-      <widget class="QPushButton" name="pushButton">
+    <layout class="QGridLayout" name="gridLayout" columnstretch="1,4,6,0">
+     <item row="4" column="1" rowspan="2">
+      <widget class="QListView" name="recipeExplorer"/>
+     </item>
+     <item row="1" column="2" rowspan="4" colspan="2">
+      <widget class="QTextBrowser" name="recipeView"/>
+     </item>
+     <item row="0" column="2" colspan="2">
+      <widget class="QLabel" name="RECIPE">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+         <pointsize>20</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
-        <string>cook</string>
+        <string>RECIPE</string>
        </property>
       </widget>
      </item>
@@ -101,6 +114,38 @@
        </item>
       </layout>
      </item>
+     <item row="4" column="0" rowspan="2">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QCheckBox" name="breakfastBox">
+         <property name="text">
+          <string>Breakfast</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="lunchBox">
+         <property name="text">
+          <string>Lunch</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="dinnerBox">
+         <property name="text">
+          <string>Dinner</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="snackBox">
+         <property name="text">
+          <string>Snack</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
      <item row="2" column="0" colspan="2">
       <widget class="QTableWidget" name="fridgeTable">
        <property name="sizePolicy">
@@ -141,22 +186,14 @@
        </column>
       </widget>
      </item>
-     <item row="0" column="2">
-      <widget class="QLabel" name="RECIPE">
-       <property name="font">
-        <font>
-         <family>Tahoma</family>
-         <pointsize>20</pointsize>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>RECIPE</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0" colspan="2">
+     <item row="0" column="0">
       <widget class="QLabel" name="FRIDGE">
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="font">
         <font>
          <family>Tahoma</family>
@@ -169,43 +206,19 @@
        </property>
       </widget>
      </item>
-     <item row="4" column="1" rowspan="2">
-      <widget class="QListView" name="recipeExplorer"/>
+     <item row="5" column="3">
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>cook</string>
+       </property>
+      </widget>
      </item>
-     <item row="4" column="0" rowspan="2">
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QCheckBox" name="breakfastBox">
-         <property name="text">
-          <string>Breakfast</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="lunchBox">
-         <property name="text">
-          <string>Lunch</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="dinnerBox">
-         <property name="text">
-          <string>Dinner</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="snackBox">
-         <property name="text">
-          <string>Snack</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="1" column="2" rowspan="4">
-      <widget class="QTextBrowser" name="recipeView"/>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="saveButton">
+       <property name="text">
+        <string>save</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>

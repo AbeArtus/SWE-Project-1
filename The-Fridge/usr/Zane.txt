@@ -1,6 +1,12 @@
 Zane
 Z
-banana 3
-corn 3
-egg 2
-milk 8 g
+cooking_spray 3
+Egg 3
+salt 3
+Ground_Black_Pepper 7
+Bread 28 slice
+Cheese 8 slice
+Ham 8 slice
+Ketchup 8 slice
+Cheddar_Cheese 2 slice
+Ketchup 6

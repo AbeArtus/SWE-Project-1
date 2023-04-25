@@ -44,6 +44,7 @@ void login::on_loginButton_clicked()
     // Append the "usr" directory and the file name to the parent directory path
     QString filePath = parentDir.filePath("The-Fridge/usr/" + fileName);
     QFile file(filePath);
+    qDebug() << filePath;
 
     //Start Authentication process
     if(file.exists()){

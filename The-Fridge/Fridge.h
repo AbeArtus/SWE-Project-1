@@ -7,11 +7,13 @@
 #include <fstream>
 #include "Ingredient.h"
 #include <iostream>
+#include <QDir>
+#include <QCoreApplication>
 
 
 class Fridge {
     private:
-        
+
         vector<Ingredient> myFridge;
         string name;
 
@@ -29,9 +31,10 @@ class Fridge {
             myFridge = {};
         }
 
+
         Fridge(string fileDirectory) {
-    ifstream infile(fileDirectory);
-    if (!infile.is_open()){
+        ifstream infile(fileDirectory);
+        if (!infile.is_open()){
         // try opening file using the second file path
         ifstream infile2("usr/"+fileDirectory+".txt");
         if (!infile2.is_open()) {
@@ -41,7 +44,7 @@ class Fridge {
             return;
         }
         // use the second file stream
-        infile = move(infile2);
+        infile = std::move(infile2);
     }
 
     string line;
@@ -49,7 +52,7 @@ class Fridge {
     // remove first two lines
     getline(infile, line);
     getline(infile, line);
-    
+
     while(getline(infile, line)){
         if(infile.eof())
             break;
@@ -59,7 +62,7 @@ class Fridge {
         double amount;
         string unit;
 
-        
+
         lineStream >> itemname;
         if( !(lineStream >> amount) ) {
            addIngredient(Ingredient(itemname));
@@ -72,7 +75,79 @@ class Fridge {
         }
     }
     infile.close();
-}
+
+
+    }
+
+
+    void saveFile(string user)
+    {
+
+        // get the original file
+        // save the username and password
+        // overwrite: username, passwor, fridge content
+
+        QString fileName = QString::fromStdString(user + ".txt");
+
+        // Get the parent directory of the current directory
+        QDir parentDir(QCoreApplication::applicationDirPath());
+        parentDir.cdUp();
+
+        // Append the "usr" directory and the file name to the parent directory path
+        QString filePath = parentDir.filePath("The-Fridge/usr/" + fileName);
+        QFile file(filePath);
+        qDebug() << filePath;
+        string usrnm;
+        string pswd;
+
+
+        // check to see if the file is open
+
+
+
+        // if the file does NOT exist
+        if( !(file.exists()) ) {
+        qDebug() << "Error Opening File: " << filePath;
+            return;
+        }
+
+        // get first two lines
+        if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+            //Stream in text
+            QTextStream in(&file);
+            //Read first line
+            usrnm = in.readLine().toStdString();
+            pswd = in.readLine().toStdString();
+            file.close();
+        }
+
+
+        // close the current file
+
+
+        //--- write to the file----//
+        // create a new fstream object
+
+
+        if (file.open(QIODevice::WriteOnly | QIODevice::Text)){
+
+            // add the user name and passwrod
+            file.write((usrnm + "\n").c_str());
+            file.write((pswd + "\n").c_str());
+
+            // add the fridge contents
+
+            file.write( getString().c_str() );
+
+
+        } else {
+        qDebug() << "Error Witing to File: " << filePath;
+        }
+        // close the file
+
+
+
+    }
 
         int size() {
             return myFridge.size();
@@ -88,10 +163,11 @@ class Fridge {
                 return;
             }
 
-            if (searchItem(item) < 0) {
+            else if (searchItem(item) < 0) {
                 myFridge.push_back(item);
             } else {
                 myFridge.at(searchItem(item)).addAmount(item.getAmnt());
+                return;
             }
         }
 
@@ -101,6 +177,7 @@ class Fridge {
 
         void removeIngredient(int idx) {
             myFridge.erase(myFridge.begin() + idx);
+
         }
 
         string getString() {    

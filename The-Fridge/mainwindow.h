@@ -40,12 +40,16 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_saveButton_clicked();
+
+    void on_pushButton_clicked();
+
 private:
     Fridge myFridge;
     Ui::MainWindow *ui;
     void populateRecipeList(const QString& folderPath, int arg);
     void displayRecipe(const QString& dirPath);
-    void subIngredient(Ingredient ingrd);
+    void Subtract(Ingredient ingrd);
 
 
 };
