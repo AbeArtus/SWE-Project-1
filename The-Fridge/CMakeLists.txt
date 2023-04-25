@@ -25,6 +25,7 @@ set(PROJECT_SOURCES
         signup.cpp
         signup.h
         signup.ui
+        Ingredient.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
