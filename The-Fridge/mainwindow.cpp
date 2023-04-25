@@ -15,9 +15,6 @@ MainWindow::MainWindow(QWidget *parent, const QString& username)
     ui->setupUi(this);
     //User has logged in
     if(username != ""){
-        ui->fridgeTable->setRowCount(100);
-        ui->fridgeTable->setItem(0, 0, new QTableWidgetItem(QString("test")));
-
         QString fileName = username + ".txt";
 
         // Get the parent directory of the current directory
@@ -31,13 +28,10 @@ MainWindow::MainWindow(QWidget *parent, const QString& username)
 
         //Fridge Widget Config
         QTableWidget *myFridgeTable = ui->fridgeTable;
-        qDebug() << "myFridgeTable: " << myFridgeTable;
 
         myFridgeTable->setRowCount(myFridge.size());
         myFridgeTable->setColumnCount(2);
-
-        qDebug() << "rowCount: " << myFridgeTable->rowCount();
-        qDebug() << "columnCount: " << myFridgeTable->columnCount();
+        ui->fridgeTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
         //Fill fridge widget
         for(int i = 0; i < myFridge.size(); i++){
@@ -45,18 +39,9 @@ MainWindow::MainWindow(QWidget *parent, const QString& username)
             QTableWidgetItem *item = new QTableWidgetItem(QString::fromStdString(ingredient.getName()));
             QTableWidgetItem *count = new QTableWidgetItem(QString::number(ingredient.getAmnt()));
 
-            qDebug() << "item: " << item->text();
-            qDebug() << "count: " << count->text();
-
             myFridgeTable->setItem(i, 0, item);
             myFridgeTable->setItem(i, 1, count);
         }
-
-        //Update Table
-        qApp->processEvents();
-        qDebug() << "update";
-        myFridgeTable->update();
-        myFridgeTable->show();
     }
 }
 
@@ -68,6 +53,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_actionlogin_triggered()
 {
+        this->hide();       //hides the first main window, this instance does not have userlogin information
         login mlogin;
         mlogin.setModal(true);
         mlogin.exec();

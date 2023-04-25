@@ -90,7 +90,7 @@
     </attribute>
     <column>
      <property name="text">
-      <string>New Column</string>
+      <string>Item</string>
      </property>
     </column>
     <column>
