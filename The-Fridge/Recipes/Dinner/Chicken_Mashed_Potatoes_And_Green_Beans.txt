@@ -8,19 +8,21 @@ It may not be exactly like Mom's, but this hearty, warm meal will put a smile on
 #
 Olive_Oil 42.0 g
 Chicken_Breast 908.0 g
-Potatoes_Peeled_And_Quartered 908.0 g
+Potato 908.0 g
 Butter 56.8 g
 Salt 7.0 g
 Ground_Black_Pepper 1.7 g
 Milk 243.0 g
-Steamed_Green_Beans 188.0 g
+Green_Beans 188.0 g
 #
-1. In a large skillet, heat oil over medium-high heat for 1 minute. Add chicken and cover. Cook for 8 minutes per side, or until no longer pink in the center. Turn off heat and cover to keep warm.
+1. Peel and Quarter the Potatoes and steam the green beans
 
-2. Fill a large saucepan with 4 to 5 quarts of water and add potatoes. Bring to a boil over high heat and cook until potatoes can be pierced easily with a fork.
+2. In a large skillet, heat oil over medium-high heat for 1 minute. Add chicken and cover. Cook for 8 minutes per side, or until no longer pink in the center. Turn off heat and cover to keep warm.
 
-3. Drain liquid. Add butter, salt, pepper, and milk and use a hand mixer to whip. Cover and set aside.
+3. Fill a large saucepan with 4 to 5 quarts of water and add potatoes. Bring to a boil over high heat and cook until potatoes can be pierced easily with a fork.
 
-4. Microwave beans according to package instructions. Season with salt and pepper. Serve immediately with chicken and mashed potatoes.
+4. Drain liquid. Add butter, salt, pepper, and milk and use a hand mixer to whip. Cover and set aside.
+
+5. Microwave beans according to package instructions. Season with salt and pepper. Serve immediately with chicken and mashed potatoes.
 
 

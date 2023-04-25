@@ -6,13 +6,13 @@ Chicken Salad Sandwich
 #
 This is a great use for leftover cooked chicken breast.
 #
-White_Chicken_Canned 1.0
+Chicken_Canned 1.0
 Celery_Minced 120.0 g
 Salt
 Paprika
 Mayonnaise 14.4 g
-Raisin_Bread 2.0 Slices
-Provolone_Cheese 2.0 Slices
+Raisin_Bread 2.0 Slice
+Provolone_Cheese 2.0 Slice
 Apple 0.25
 #
 1. Place chicken in a small bowl. Add celery, salt, pa-prika, and mayonnaise, Mix until combined.

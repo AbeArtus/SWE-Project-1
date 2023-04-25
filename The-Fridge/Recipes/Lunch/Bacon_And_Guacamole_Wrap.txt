@@ -8,8 +8,8 @@ Avocado: incredibly healthy. Bacon: not so healthy. Avocado and bacon together: 
 #
 Guacamole 50.0 g
 Tortilla 1.0
-Pepper_Jack_Cheese 3.0 Slices
-Bacon_Cooked 3.0 Slices
+Pepper_Jack_Cheese 3.0 Slice
+Bacon_Cooked 3.0 Slice
 #
 1. Spread guacamole on tortilla. Layer cheese on top of guacamole.
 

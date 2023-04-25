@@ -10,7 +10,7 @@ Cooking spray
 Egg 1
 Salt
 Ground_Black_Pepper
-Bread 2 Slices
+Bread 2 Slice
 Cheese 1 Slice
 Ham 1 Slice
 Ketchup

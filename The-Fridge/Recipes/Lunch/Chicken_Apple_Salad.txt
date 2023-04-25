@@ -6,14 +6,16 @@ Chicken Apple Salad
 #
 Raisins, apples, honey--this salad is practically a dessert. In fact, offer your friends a dessert salad and see what they say, just for science.
 #
-Lettuce_Head 0.25
+Lettuce_Head 0.25 g
 Cooked_Chicken 140.0 g
 Raisins 37.0 g
-Apple_Slices 90.0 g
+Apple_Slice 90.0 g
 Honey_Mustard_Dressing
 #
-1. Wash and dry lettuce (see page 66). With clean hands or a knife, tear or cut lettuce into bite-sized pieces. Place in a salad bowl.
+1. Cook the Chicken
 
-2. Top with chicken, raisins, and apples.
+2. Wash and dry lettuce (see page 66). With clean hands or a knife, tear or cut lettuce into bite-sized pieces. Place in a salad bowl.
 
-3. Toss with dressing and serve.
+3. Top with chicken, raisins, and apples.
+
+4. Toss with dressing and serve.

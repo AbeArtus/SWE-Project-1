@@ -10,11 +10,13 @@ Cream_Cheese_Softened 30.0 g
 Buffalo_Wing_Sauce 10.0 g
 Cooked_Chicken 70.0 g
 Round_Roll 1.0
-Mozzarella_Cheese 2.0 Slices
+Mozzarella_Cheese 2.0 Slice
 Romaine_Lettuce_Leaf 1.0
 #
-1. Place softened cream cheese and sauce in a medium-sized bowl. Mix until well combined.
+1. Cook the chicken
 
-2. Add chicken and use a fork to break it into small pieces. Mix until all ingredients are well combined.
+2. Place softened cream cheese and sauce in a medium-sized bowl. Mix until well combined.
 
-3. Slice roll in half. On the bottom stack lettuce, 1 slice of cheese, chicken mixture, and the other slice of cheese. Close the sandwich and wrap in plastic wrap until ready to eat.
+3. Add chicken and use a fork to break it into small pieces. Mix until all ingredients are well combined.
+
+4. Slice roll in half. On the bottom stack lettuce, 1 slice of cheese, chicken mixture, and the other slice of cheese. Close the sandwich and wrap in plastic wrap until ready to eat.

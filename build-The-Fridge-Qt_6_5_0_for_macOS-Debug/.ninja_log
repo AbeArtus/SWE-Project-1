@@ -1,0 +1,19 @@
+# ninja log v5
+0	653	1682394152938286315	The-Fridge_autogen/timestamp	c8849325fd190603
+0	653	1682394152938286315	The-Fridge_autogen/mocs_compilation.cpp	c8849325fd190603
+0	653	1682394152938286315	/Users/jennifernguyen/Documents/SWE-Project-1/SWE-Project-1/build-The-Fridge-Qt_6_5_0_for_macOS-Debug/The-Fridge_autogen/mocs_compilation.cpp	c8849325fd190603
+0	653	1682394152938286315	/Users/jennifernguyen/Documents/SWE-Project-1/SWE-Project-1/build-The-Fridge-Qt_6_5_0_for_macOS-Debug/The-Fridge_autogen/timestamp	c8849325fd190603
+654	1420	1682394153704610134	CMakeFiles/The-Fridge.dir/The-Fridge_autogen/mocs_compilation.cpp.o	6a5c285759b79be2
+654	1423	1682394153702554986	CMakeFiles/The-Fridge.dir/main.cpp.o	3623c1b1bda9e45c
+654	1566	1682394153850566789	CMakeFiles/The-Fridge.dir/login.cpp.o	736a4e3309639eaf
+654	1566	1682394153850091001	CMakeFiles/The-Fridge.dir/signup.cpp.o	13bcb7cdb9538c3b
+654	1712	1682394153998653465	CMakeFiles/The-Fridge.dir/mainwindow.cpp.o	c866fd4889384ae
+1712	1874	1682394154163667866	The-Fridge.app/Contents/MacOS/The-Fridge	c07025cd86f6a09a
+11	46	1682405363284096283	The-Fridge_autogen/timestamp	c8849325fd190603
+11	46	1682405363284096283	The-Fridge_autogen/mocs_compilation.cpp	c8849325fd190603
+11	46	1682405363284096283	/Users/jennifernguyen/Documents/SWE-Project-1/SWE-Project-1/build-The-Fridge-Qt_6_5_0_for_macOS-Debug/The-Fridge_autogen/timestamp	c8849325fd190603
+11	46	1682405363284096283	/Users/jennifernguyen/Documents/SWE-Project-1/SWE-Project-1/build-The-Fridge-Qt_6_5_0_for_macOS-Debug/The-Fridge_autogen/mocs_compilation.cpp	c8849325fd190603
+50	1089	1682405364317665457	CMakeFiles/The-Fridge.dir/login.cpp.o	736a4e3309639eaf
+50	1090	1682405364317655957	CMakeFiles/The-Fridge.dir/signup.cpp.o	13bcb7cdb9538c3b
+50	1184	1682405364417764970	CMakeFiles/The-Fridge.dir/mainwindow.cpp.o	c866fd4889384ae
+1184	1482	1682405364718063175	The-Fridge.app/Contents/MacOS/The-Fridge	c07025cd86f6a09a

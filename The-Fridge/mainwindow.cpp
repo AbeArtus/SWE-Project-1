@@ -7,6 +7,7 @@
 #include "Fridge.h"
 #include <QFile>
 #include <Qdir>
+#include "Ingredient.h"
 
 
 MainWindow::MainWindow(QWidget *parent, const QString& username)
@@ -51,6 +52,11 @@ MainWindow::MainWindow(QWidget *parent, const QString& username)
             myFridgeTable->setItem(i, 0, item);
             myFridgeTable->setItem(i, 1, count);
         }
+
+        Ingredient marshmellow = Ingredient("Marshmellow",1);
+        myFridge.addIngredient(marshmellow);
+
+        qDebug() << "sadsdasda";
 
         //Update Table
         qApp->processEvents();
