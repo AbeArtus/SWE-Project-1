@@ -6,6 +6,7 @@
 #include <sys/stat.h>
 #include <fstream>
 #include <iostream>
+#include <filesystem>
 
 
 using namespace std;
@@ -94,6 +95,28 @@ class Recipe {
     public:        
         // directories /Recipes/{Breakfast}{Lunch}{Dinner}{Snacks}{Desert}
 
+        Recipe(string FILENAME) {
+            string dir[4] ={"Breakfast","Lunch","Dinner","Snack"};
+            namespace fs = std::filesystem;
+            
+            int idx = -1;
+
+            for (int i = 0; i < 4; ++i) {
+                fs::path filepath = "Recipes/" + dir[i] + "/" + FILENAME+".txt";
+                if(fs::exists(filepath)) {
+                    idx = i;
+                    break;
+                }
+            }
+
+            if (idx ==  -1)
+                cout
+                    << "Error opening file: "
+                    << FILENAME + ".txt"
+                    << endl;
+            return;
+
+        }
 
         /// @brief Loads in a Recipe from file, \n list of recipes can be found inside of the 'Food type directory' \n examples in definition in the -list.txt file
         /// @param FILENAME type:string | The name of the recipe to load into Recipe

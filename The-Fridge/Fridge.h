@@ -41,44 +41,50 @@ class Fridge {
 
     public:
     
-        Fridge(string USERFILENAME) {
-            ifstream infile("usr/"+USERFILENAME+".txt");
-            if (!infile.is_open()){
-                cout 
-                    << "Error opening file: " 
-                    << USERFILENAME << ".txt" 
-                    << " in ~/usr" << endl;
-                return;
-            }
-            string line;
-
-            // remove first two lines
-            getline(infile, line);
-            getline(infile, line);
-            
-            while(getline(infile, line)){
-                if(infile.eof())
-                    break;
-
-                istringstream lineStream(line);
-                string itemname;
-                double amount;
-                string unit;
-
-                
-                lineStream >> itemname;
-                if( !(lineStream >> amount) ) {
-                   addIngredient(Ingredient(itemname));
-                }
-                else if (lineStream >> unit) {
-                    addIngredient(Ingredient(itemname,amount,unit));
-                }
-                else {
-                    addIngredient(Ingredient(itemname,amount));
-                }
-            }
-            infile.close();
+        Fridge(string fileDirectory) {
+    ifstream infile(fileDirectory);
+    if (!infile.is_open()){
+        // try opening file using the second file path
+        ifstream infile2("usr/"+fileDirectory+".txt");
+        if (!infile2.is_open()) {
+            cout 
+                << "Error opening file: " 
+                << fileDirectory << endl;
+            return;
         }
+        // use the second file stream
+        infile = move(infile2);
+    }
+
+    string line;
+
+    // remove first two lines
+    getline(infile, line);
+    getline(infile, line);
+    
+    while(getline(infile, line)){
+        if(infile.eof())
+            break;
+
+        istringstream lineStream(line);
+        string itemname;
+        double amount;
+        string unit;
+
+        
+        lineStream >> itemname;
+        if( !(lineStream >> amount) ) {
+           addIngredient(Ingredient(itemname));
+        }
+        else if (lineStream >> unit) {
+            addIngredient(Ingredient(itemname,amount,unit));
+        }
+        else {
+            addIngredient(Ingredient(itemname,amount));
+        }
+    }
+    infile.close();
+}
 
         int size() {
             return myFridge.size();
