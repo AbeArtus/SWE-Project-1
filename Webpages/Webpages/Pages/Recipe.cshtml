@@ -8,10 +8,7 @@
 <div class="sidenav">
     @foreach (var i in @Model.filePaths)
     {
-        if (!i.Contains("list"))
-        {
-            <a href="Recipe?handler=viewRecipe&recipeName=@i" type="nav-link">@System.IO.Path.GetFileName(@i).Replace(".txt", "").Replace("_", " ")</a>
-        }
+        <a href="Recipe?handler=viewRecipe&recipeName=@i" type="nav-link">@System.IO.Path.GetFileName(@i).Replace(".txt", "").Replace("_", " ")</a>
 
         <br />
     }
@@ -20,20 +17,20 @@
 <style>
     .sidenav {
         height: 100%;
-        width: auto;
+        width: 200px;
         position: fixed;
         z-index: 1;
         top: 0;
         left: 0;
         background-color: #818181;
-        overflow-x: hidden;
+        overflow-x: clip;
         padding-top: 20px;
     }
 
         .sidenav a {
-            padding: 6px 8px 6px 16px;
+            padding: 6px 6px 6px 6px;
             text-decoration: none;
-            font-size: 25px;
+            font-size: 18px;
             color: #f1f1f1;
             display: block;
         }
@@ -57,9 +54,4 @@
 {
     @i<br />
 }
-
-@*@foreach (var i in @Model.filecontent)
-{
-    @i<br />
-}*@
 

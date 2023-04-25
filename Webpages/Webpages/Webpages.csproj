@@ -11,7 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="App_Data\DemoUser\" />
+    <None Include="wwwroot\App_Data\DemoUser\Breakfast_Burritos.txt" />
+    <None Include="wwwroot\App_Data\DemoUser\Egg_Sandwhich.txt" />
   </ItemGroup>
 
 </Project>

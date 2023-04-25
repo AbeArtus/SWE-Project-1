@@ -5,6 +5,26 @@
       "PackagePath": "staticwebassets\\Webpages.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ET\\Documents\\GitHub\\SWE-Project-1\\Webpages\\Webpages\\wwwroot\\App_Data\\DemoUser\\Breakfast_Burritos.txt",
+      "PackagePath": "staticwebassets\\App_Data\\DemoUser\\Breakfast_Burritos.txt"
+    },
+    {
+      "Id": "C:\\Users\\ET\\Documents\\GitHub\\SWE-Project-1\\Webpages\\Webpages\\wwwroot\\App_Data\\DemoUser\\Chicken_Mashed_Potatoes_And_Green_Beans.txt",
+      "PackagePath": "staticwebassets\\App_Data\\DemoUser\\Chicken_Mashed_Potatoes_And_Green_Beans.txt"
+    },
+    {
+      "Id": "C:\\Users\\ET\\Documents\\GitHub\\SWE-Project-1\\Webpages\\Webpages\\wwwroot\\App_Data\\DemoUser\\Chicken_Ramen.txt",
+      "PackagePath": "staticwebassets\\App_Data\\DemoUser\\Chicken_Ramen.txt"
+    },
+    {
+      "Id": "C:\\Users\\ET\\Documents\\GitHub\\SWE-Project-1\\Webpages\\Webpages\\wwwroot\\App_Data\\DemoUser\\Egg_Sandwhich.txt",
+      "PackagePath": "staticwebassets\\App_Data\\DemoUser\\Egg_Sandwhich.txt"
+    },
+    {
+      "Id": "C:\\Users\\ET\\Documents\\GitHub\\SWE-Project-1\\Webpages\\Webpages\\wwwroot\\App_Data\\DemoUser\\Pasta_Sausage_And_Peppers.txt",
+      "PackagePath": "staticwebassets\\App_Data\\DemoUser\\Pasta_Sausage_And_Peppers.txt"
+    },
+    {
       "Id": "C:\\Users\\ET\\Documents\\GitHub\\SWE-Project-1\\Webpages\\Webpages\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

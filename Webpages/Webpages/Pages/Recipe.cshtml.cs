@@ -6,7 +6,6 @@ namespace SWEProject.Pages
 {
     public class RecipeModel : PageModel
     {
-        //public Recipe recipe = Recipe.GetTestRecipe();
         public Recipe recipe;
 
         //public List<File> Files { get; set; }
@@ -32,7 +31,7 @@ namespace SWEProject.Pages
         {
             //get all recipes
             filePaths = Directory.GetFiles(Path.Combine(
-                Environment.ContentRootPath, "App_Data/DemoUser/Breakfast/"));
+                Environment.WebRootPath, "App_Data/DemoUser/"));
         }
 
         public void DisplayRecipe(string recipePath)
@@ -47,16 +46,6 @@ namespace SWEProject.Pages
         public string Description { get; set; }
         public List<string> Ingredients { get; set; }
         public List<string> Directions { get; set; }
-        public static Recipe GetTestRecipe()
-        {
-            return new Recipe(new string[]{ " 1 Cooking_Spray", "2 item" })
-            {
-                Name = "Breakfast Burritos",
-                Description = "Make this breakfast wrap on mornings when you're in a hurry and don't have time to sit and eat. Even better. Make it a night before and pop it in the microwave for about 30 sec.",
-                Ingredients = new List<string> { " 1 Cooking_Spray", "2 item" },
-                Directions = new List<string> { "Coat a medium-sized skill" }
-            };
-        }
 
         /// <summary>
         /// Creates a recipe from a .txt file.
