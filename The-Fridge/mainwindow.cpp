@@ -12,40 +12,58 @@
 #include <QListView>
 #include <QStringListModel>
 #include <QMessageBox>
+#include "Recipe.h"
+
+QString usr = "";
 
 MainWindow::MainWindow(QWidget *parent, const QString& username)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->unitcomboBox->addItem("");
+    ui->unitcomboBox->addItem("g");
+    ui->unitcomboBox->addItem("slice");
+
+
+
     //User has logged in
     if(username != ""){
-        QString fileName = username + ".txt";
+        usr = username;
+        QString fileName = usr + ".txt";
 
         // Get the parent directory of the current directory
         QDir parentDir(QCoreApplication::applicationDirPath());
         parentDir.cdUp();
 
+
         // Append the "usr" directory and the file name to the parent directory path
         QString filePath = parentDir.filePath("The-Fridge/usr/" + fileName);
         QFile file(filePath);
-        Fridge myFridge = Fridge(filePath.toStdString());
+        myFridge = Fridge(filePath.toStdString());
 
         //Fridge Widget Config
         ui->fridgeTable->setEditTriggers(QAbstractItemView::DoubleClicked);
         QTableWidget *myFridgeTable = ui->fridgeTable;
 
         myFridgeTable->setRowCount(myFridge.size());
-        myFridgeTable->setColumnCount(2);
+        myFridgeTable->setColumnCount(3);
         ui->fridgeTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
         //Fill fridge widget
         for(int i = 0; i < myFridge.size(); i++){
             Ingredient ingredient = myFridge.getIngredient(i);
             QTableWidgetItem *item = new QTableWidgetItem(QString::fromStdString(ingredient.getName()));
+            item->setFlags(item->flags() & ~Qt::ItemIsEditable);
             QTableWidgetItem *count = new QTableWidgetItem(QString::number(ingredient.getAmnt()));
+            count->setFlags(count->flags() & ~Qt::ItemIsEditable);
+            QTableWidgetItem *unit = new QTableWidgetItem(QString::fromStdString(ingredient.getUnit()));
+            unit->setFlags(unit->flags() & ~Qt::ItemIsEditable);
+
+
 
             myFridgeTable->setItem(i, 0, item);
             myFridgeTable->setItem(i, 1, count);
+            myFridgeTable->setItem(i,2, unit);
         }
     }
 }
@@ -92,7 +110,7 @@ void MainWindow::on_dinnerBox_stateChanged(int arg1)
 
 void MainWindow::on_snackBox_stateChanged(int arg1)
 {
-    populateRecipeList("The-Fridge/Recipes/SnackBox", arg1);
+    populateRecipeList("The-Fridge/Recipes/Snack", arg1);
 }
 
 void MainWindow::populateRecipeList(const QString& folderPath, int arg)
@@ -178,8 +196,10 @@ void MainWindow::on_recipeExplorer_clicked(const QModelIndex &index)
     //iterate through dirList to find where the file is
     for (const QString& dirPath : dirList) {
         QDir dir(dirPath);
+        Recipe recipe = Recipe(itemName.toStdString());
         if (dir.exists(itemName)) {
             found = true;
+
             displayRecipe(dirPath + "/" +  itemName);
             break;
         }
@@ -202,3 +222,102 @@ void MainWindow::displayRecipe(const QString& dirPath){
     ui->recipeView->setPlainText(content);
 }
 
+
+void MainWindow::on_AddIngPushButton_clicked()
+{
+    QString name    = ui->NameQLineEdit->text();
+    std::string str = name.toStdString();
+
+    str.erase(0, str.find_first_not_of(" "));
+    str.erase(str.find_last_not_of(" ") + 1);
+    replace(str.begin(), str.end(), ' ', '_');
+
+    name = QString::fromStdString(str);
+
+    QString unit    = ui->unitcomboBox->currentText();
+    double val       = ui->amtQDoubleSpinBox->value();
+    if (val <= 0 || name == "")
+        return;
+
+    if (unit == "")
+        addIngredient(Ingredient(name.toStdString(),val));
+    else
+        addIngredient(Ingredient(name.toStdString(), val, unit.toStdString()));
+
+
+}
+
+void MainWindow::addIngredient(Ingredient ingrd) {
+    int idx = myFridge.searchItem(ingrd);
+    QTableWidget *myFridgeTable = ui->fridgeTable;
+
+    if (idx >= 0) {
+        // increment the model and view by ingrd amoun at idx
+
+        QTableWidgetItem* item = myFridgeTable->item(idx,1);
+
+        QString text = item->text();
+        std::string str = text.toStdString();
+        str.erase(0, str.find_first_of(" "));
+        str.erase(str.find_last_not_of(" ") + 1);
+        replace(str.begin(), str.end(), ' ', '_');
+        text = QString::fromStdString(str);
+
+        double val = myFridge.getIngredient(idx).getAmnt();
+        double iremval = val + (ingrd.getAmnt());
+        QTableWidgetItem *count = new QTableWidgetItem(QString::number(iremval));
+        myFridgeTable->setItem(idx,1, count);
+
+        myFridge.addIngredient(ingrd);
+        return;
+    } else {
+        // add another elemnt to the model and view (Both at the end of the list)
+        idx = myFridge.size();
+
+
+        QTableWidgetItem *item = new QTableWidgetItem(QString::fromStdString(ingrd.getName()));
+        item->setFlags(item->flags() & ~Qt::ItemIsEditable);
+        QTableWidgetItem *count = new QTableWidgetItem(QString::number(ingrd.getAmnt()));
+        count->setFlags(count->flags() & ~Qt::ItemIsEditable);
+        QTableWidgetItem *unit = new QTableWidgetItem(QString::fromStdString(ingrd.getUnit()));
+        unit->setFlags(unit->flags() & ~Qt::ItemIsEditable);
+
+
+        myFridgeTable->setRowCount(myFridge.size()+1);
+        myFridgeTable->setItem(idx, 0, item);
+        myFridgeTable->setItem(idx, 1, count);
+        myFridgeTable->setItem(idx,2, unit);
+
+        myFridge.addIngredient(ingrd);
+    }
+}
+
+// subtract
+void MainWindow::on_pushButton_2_clicked()
+{
+    QString name    = ui->NameQLineEdit->text();
+    std::string str = name.toStdString();
+    str.erase(0, str.find_first_not_of(" "));
+    str.erase(str.find_last_not_of(" ") + 1);
+    replace(str.begin(), str.end(), ' ', '_');
+    name = QString::fromStdString(str);
+
+    QString unit    = ui->unitcomboBox->currentText();
+
+    double val       = ui->amtQDoubleSpinBox->value();
+
+    int idx = myFridge.searchItem(name.toStdString());
+
+    if  (idx <  0) {
+        return;
+    }
+    if ( myFridge.getIngredient(idx).getAmnt() - val <= 0) {
+        myFridge.removeIngredient(idx);
+        ui->fridgeTable->removeRow(idx);
+
+    }
+}
+
+void MainWindow::subIngredient(Ingredient ingrd) {
+
+}

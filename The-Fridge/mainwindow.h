@@ -2,6 +2,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "Fridge.h"
+#include "Ingredient.h"
+
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -16,6 +19,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr, const QString& username = "");
     ~MainWindow();
+    void addIngredient(Ingredient ingrd);
 
 private slots:
     void on_actionlogin_triggered();
@@ -32,10 +36,16 @@ private slots:
 
     void on_recipeExplorer_clicked(const QModelIndex &index);
 
+    void on_AddIngPushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
 private:
+    Fridge myFridge;
     Ui::MainWindow *ui;
     void populateRecipeList(const QString& folderPath, int arg);
     void displayRecipe(const QString& dirPath);
+    void subIngredient(Ingredient ingrd);
 
 
 };
