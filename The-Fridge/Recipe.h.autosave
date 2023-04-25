@@ -6,6 +6,7 @@
 #include <sys/stat.h>
 #include <fstream>
 #include <iostream>
+#include <filesystem>
 
 
 using namespace std;
@@ -96,11 +97,13 @@ class Recipe {
 
         Recipe(string FILENAME) {
             string dir[4] ={"Breakfast","Lunch","Dinner","Snack"};
-
+            namespace fs = std::filesystem;
+            
             int idx = -1;
 
             for (int i = 0; i < 4; ++i) {
-
+                fs::path filepath = "Recipes/" + dir[i] + "/" + FILENAME+".txt";
+                if(fs::exists(f))
             }
 
         }

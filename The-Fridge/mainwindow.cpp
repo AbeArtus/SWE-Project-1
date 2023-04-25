@@ -27,6 +27,7 @@ MainWindow::MainWindow(QWidget *parent, const QString& username)
         Fridge myFridge = Fridge(filePath.toStdString());
 
         //Fridge Widget Config
+        ui->fridgeTable->setEditTriggers(QAbstractItemView::DoubleClicked);
         QTableWidget *myFridgeTable = ui->fridgeTable;
 
         myFridgeTable->setRowCount(myFridge.size());
