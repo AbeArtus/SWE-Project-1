@@ -30,9 +30,13 @@ private slots:
 
     void on_snackBox_stateChanged(int arg1);
 
+    void on_recipeExplorer_clicked(const QModelIndex &index);
+
 private:
     Ui::MainWindow *ui;
     void populateRecipeList(const QString& folderPath, int arg);
+    void displayRecipe(const QString& dirPath);
+
 
 };
 
