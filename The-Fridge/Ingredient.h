@@ -35,6 +35,10 @@ class Ingredient {
             return amount;
         }
 
+        void setAmnt(int amnt) {
+            amount = amnt;
+        }
+
         string getUnit(){
             return unit;
         }

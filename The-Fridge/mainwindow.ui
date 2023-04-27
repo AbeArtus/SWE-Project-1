@@ -6,217 +6,278 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>791</width>
+    <height>543</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="gridLayoutWidget">
+   <widget class="QLabel" name="missingLabel">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>460</y>
+      <width>291</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="recipeView">
+    <property name="geometry">
+     <rect>
+      <x>389</x>
+      <y>40</y>
+      <width>381</width>
+      <height>411</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QListView" name="recipeExplorer">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>290</y>
+      <width>271</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RECIPE">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>0</y>
+      <width>103</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tahoma</family>
+      <pointsize>20</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>RECIPE</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="fridgeTable">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>37</y>
+      <width>361</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>281</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <attribute name="horizontalHeaderStretchLastSection">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Item</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Count</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Unit</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLabel" name="FRIDGE">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
-      <width>781</width>
-      <height>541</height>
+      <y>0</y>
+      <width>200</width>
+      <height>33</height>
      </rect>
     </property>
-    <layout class="QGridLayout" name="gridLayout" columnstretch="1,4,6,0">
-     <item row="4" column="1" rowspan="2">
-      <widget class="QListView" name="recipeExplorer"/>
-     </item>
-     <item row="1" column="2" rowspan="4" colspan="2">
-      <widget class="QTextBrowser" name="recipeView"/>
-     </item>
-     <item row="0" column="2" colspan="2">
-      <widget class="QLabel" name="RECIPE">
-       <property name="font">
-        <font>
-         <family>Tahoma</family>
-         <pointsize>20</pointsize>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>RECIPE</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0" colspan="2">
-      <layout class="QHBoxLayout" name="horizontalLayout" stretch="8,2,2,1,0">
-       <property name="spacing">
-        <number>4</number>
-       </property>
-       <property name="sizeConstraint">
-        <enum>QLayout::SetNoConstraint</enum>
-       </property>
-       <item>
-        <widget class="QLineEdit" name="NameQLineEdit">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>200</width>
-           <height>0</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QDoubleSpinBox" name="amtQDoubleSpinBox"/>
-       </item>
-       <item>
-        <widget class="QComboBox" name="unitcomboBox">
-         <property name="minimumSize">
-          <size>
-           <width>50</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>8</pointsize>
-          </font>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="AddIngPushButton">
-         <property name="minimumSize">
-          <size>
-           <width>20</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>+</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_2">
-         <property name="minimumSize">
-          <size>
-           <width>20</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>-</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="4" column="0" rowspan="2">
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QCheckBox" name="breakfastBox">
-         <property name="text">
-          <string>Breakfast</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="lunchBox">
-         <property name="text">
-          <string>Lunch</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="dinnerBox">
-         <property name="text">
-          <string>Dinner</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="snackBox">
-         <property name="text">
-          <string>Snack</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="2" column="0" colspan="2">
-      <widget class="QTableWidget" name="fridgeTable">
+    <property name="minimumSize">
+     <size>
+      <width>200</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tahoma</family>
+      <pointsize>20</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>FRIDGE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="saveButton">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>10</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>save</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>460</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>cook</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>254</y>
+      <width>361</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="8,2,2,1,0">
+     <property name="spacing">
+      <number>4</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetNoConstraint</enum>
+     </property>
+     <item>
+      <widget class="QLineEdit" name="NameQLineEdit">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
        <property name="minimumSize">
         <size>
-         <width>281</width>
+         <width>200</width>
          <height>0</height>
         </size>
        </property>
-       <property name="editTriggers">
-        <set>QAbstractItemView::NoEditTriggers</set>
-       </property>
-       <attribute name="horizontalHeaderStretchLastSection">
-        <bool>true</bool>
-       </attribute>
-       <attribute name="verticalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
-       <column>
-        <property name="text">
-         <string>Item</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Count</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Unit</string>
-        </property>
-       </column>
       </widget>
      </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="FRIDGE">
+     <item>
+      <widget class="QDoubleSpinBox" name="amtQDoubleSpinBox"/>
+     </item>
+     <item>
+      <widget class="QComboBox" name="unitcomboBox">
        <property name="minimumSize">
         <size>
-         <width>200</width>
+         <width>50</width>
          <height>0</height>
         </size>
        </property>
        <property name="font">
         <font>
-         <family>Tahoma</family>
-         <pointsize>20</pointsize>
-         <bold>true</bold>
+         <pointsize>8</pointsize>
         </font>
        </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="AddIngPushButton">
+       <property name="minimumSize">
+        <size>
+         <width>20</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="text">
-        <string>FRIDGE</string>
+        <string>+</string>
        </property>
       </widget>
      </item>
-     <item row="5" column="3">
-      <widget class="QPushButton" name="pushButton">
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="minimumSize">
+        <size>
+         <width>20</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="text">
-        <string>cook</string>
+        <string>-</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="QPushButton" name="saveButton">
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>287</y>
+      <width>81</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QCheckBox" name="breakfastBox">
        <property name="text">
-        <string>save</string>
+        <string>Breakfast</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="lunchBox">
+       <property name="text">
+        <string>Lunch</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="dinnerBox">
+       <property name="text">
+        <string>Dinner</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="snackBox">
+       <property name="text">
+        <string>Snack</string>
        </property>
       </widget>
      </item>
@@ -228,7 +289,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>791</width>
      <height>21</height>
     </rect>
    </property>

@@ -10,3 +10,7 @@ Ham 8 slice
 Ketchup 8 slice
 Cheddar_Cheese 2 slice
 Ketchup 6
+Guacamole 99 g
+Tortilla 17
+Pepper_Jack_Cheese 46 slice
+Bacon_Cooked 71 slice

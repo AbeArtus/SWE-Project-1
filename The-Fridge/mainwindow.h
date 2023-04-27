@@ -4,6 +4,7 @@
 
 #include "Fridge.h"
 #include "Ingredient.h"
+#include <Qlabel>
 
 #include <QMainWindow>
 
@@ -49,7 +50,7 @@ private:
     Fridge myFridge;
     Ui::MainWindow *ui;
     void populateRecipeList(const QString& folderPath, int arg);
-    void displayRecipe(const QString& dirPath);
+    void displayRecipe();
     void Subtract(Ingredient ingrd);
     vector<Ingredient> canCook();
     void saveFile(string user);
