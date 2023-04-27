@@ -22,13 +22,17 @@ int main(){
 
     Fridge myfrg = Fridge("abeartus");
 
+    
+
     Ingredient banana = Ingredient("banana", 1);
-    if (myfrg.searchItem(banana) != 0){
+    if (myfrg.searchItem(banana) < 0){
         cout << "error code 1" << "\n";
         return -1;
     }
 
     Ingredient corn = Ingredient("corn", 1);
+    if (myfrg.searchItem(corn) != 1)
+        return -1;
     cout << "corn index: " << myfrg.searchItem(corn) <<" \n";
 
     Ingredient egg = Ingredient("egg", 1);
@@ -52,11 +56,13 @@ int main(){
     Ingredient date = Ingredient("zate", 1);
     cout << "zear idx: " << myfrg.searchItem(date) << "\n"; 
 
-    // Testing adding values in list
+
+        // Testing adding values in list
     myfrg.addIngredient(milk);
     myfrg.addIngredient(corn);
     myfrg.addIngredient(banana);
     myfrg.addIngredient(egg);
+
 
     cout << myfrg.getString();
 
@@ -90,12 +96,13 @@ int main(){
     //# Recipe Testing #//
     //##################//
     
-    Recipe Cookie_Bars = Recipe("Chocolate_Chip_Cookie_Bars","Snack");
-    cout << Cookie_Bars.getDescription() ;
+    Recipe Cookie_Bars = Recipe("Chocolate_Chip_Cookie_Bars.txt","Recipes/Snack");
+    cout << Cookie_Bars.getText() ;
 
     // ... need more testing for Recipe
 
-
+    if (Cookie_Bars.getName() != "Chocolate Chip Cookie Bars")
+        return -1;
 
 
 

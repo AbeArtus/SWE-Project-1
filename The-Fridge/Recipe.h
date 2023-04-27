@@ -34,16 +34,6 @@ class Recipe {
             return item;
         }
 
-        string getString() {
-            string str;
-            str.append(name + "\n#\n");
-            str.append(servingSize[0] + " " + servingSize[1] + "\n#\n" );
-            str.append(to_string(cookTime) + " min\n#\n");
-            str.append(description+ "\n#\n");
-            str.append(getIngredientString()+"#\n");
-            str.append(directions);
-            return str;
-        }
         
         string replace(string str, char a, char b) {
             for (int i = 0; str[i] != '\0'; i++) {
@@ -107,7 +97,7 @@ class Recipe {
             if (!(infile.is_open())) {
                     cout 
                         << "Error opening file: " 
-                        << "~/Recipes/"+ dir + "/" + FILENAME
+                        << "~"+ dir + "/" + FILENAME
                         << endl;
                     return;
             }
@@ -221,6 +211,30 @@ class Recipe {
 
         vector<Ingredient> getIngredients(){
             return Ingredients;
+        }
+
+        // Text for the GUI application or displaying to webpage
+        string getText() {
+            string str;
+            str.append(name + "\n\n");
+            str.append("ServingSize: " + servingSize[0] + " " + servingSize[1] + "\n\n" );
+            str.append( "Cook Time: "+ to_string(cookTime) + " min\n\n");
+            str.append(description+ "\n-----\n");
+            str.append(getIngredientsText()+"-----\n");
+            str.append(directions);
+            return str;
+        }
+
+        // Text for savinng to file
+        string getString() {
+            string str;
+            str.append(name + "\n#\n");
+            str.append(servingSize[0] + " " + servingSize[1] + "\n#\n" );
+            str.append(to_string(cookTime) + " min\n#\n");
+            str.append(description+ "\n#\n");
+            str.append(getIngredientString()+"#\n");
+            str.append(directions);
+            return str;
         }
 
 

@@ -95,14 +95,12 @@ void MainWindow::on_actionlogin_triggered()
         mlogin.exec();
 }
 
-
 void MainWindow::on_actionRegister_triggered()
 {
         signup msignup;
         msignup.setModal(true);
         msignup.exec();
 }
-
 
 void MainWindow::on_breakfastBox_stateChanged(int arg1)
 {
@@ -114,12 +112,10 @@ void MainWindow::on_lunchBox_stateChanged(int arg1)
     populateRecipeList("The-Fridge/Recipes/Lunch", arg1);
 }
 
-
 void MainWindow::on_dinnerBox_stateChanged(int arg1)
 {
     populateRecipeList("The-Fridge/Recipes/Dinner", arg1);
 }
-
 
 void MainWindow::on_snackBox_stateChanged(int arg1)
 {
@@ -187,7 +183,7 @@ void MainWindow::populateRecipeList(const QString& folderPath, int arg)
     }
 }
 
-
+// On recipe clicked
 void MainWindow::on_recipeExplorer_clicked(const QModelIndex &index)
 {
     //Get the itemName the user is clicking on, and add .txt to get ready to search for this file
@@ -218,7 +214,7 @@ void MainWindow::on_recipeExplorer_clicked(const QModelIndex &index)
         if (dir.exists(itemName)) {
             found = true;
 
-            displayRecipe(dirPath + "/" +  itemName);
+            displayRecipe();
             break;
         }
     }
@@ -229,36 +225,25 @@ void MainWindow::on_recipeExplorer_clicked(const QModelIndex &index)
 }
 
 void MainWindow::displayRecipe(const QString& dirPath){
-    QFile file(dirPath);
-    qDebug() << dirPath;
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)){
-        qDebug() << "error";
-        return;
-    }
-
-    QString content = QString::fromUtf8(file.readAll());
-    ui->recipeView->setPlainText(content);
+    ui->recipeView->setPlainText(recipe.getText());
 }
 
-
+// Add ingredient button press
 void MainWindow::on_AddIngPushButton_clicked()
 {
+    // get the ingredient name from the box
     QString name    = ui->NameQLineEdit->text();
-    std::string str = name.toStdString();
-
-    str.erase(0, str.find_first_not_of(" "));
-    str.erase(str.find_last_not_of(" ") + 1);
-    replace(str.begin(), str.end(), ' ', '_');
-
-    name = QString::fromStdString(str);
-
     QString unit    = ui->unitcomboBox->currentText();
     double val       = ui->amtQDoubleSpinBox->value();
-    if (val <= 0 || name == "")
+
+    // dont add if invalid ingredient
+    if (name == "")
         return;
 
+    // unitless addition
     if (unit == "")
         addIngredient(Ingredient(name.toStdString(),val));
+    // unit additon
     else
         addIngredient(Ingredient(name.toStdString(), val, unit.toStdString()));
 
@@ -267,14 +252,19 @@ void MainWindow::on_AddIngPushButton_clicked()
 
 // Addd Ingredient
 void MainWindow::addIngredient(Ingredient ingrd) {
+    // search for the item in the fridge
     int idx = myFridge.searchItem(ingrd);
     QTableWidget *myFridgeTable = ui->fridgeTable;
 
+    // if ingredient is in the list
     if (idx >= 0) {
         // increment the model and view by ingrd amoun at idx
 
+        // Get the item
         QTableWidgetItem* item = myFridgeTable->item(idx,1);
 
+
+        // !!!This block just removes white space!!!
         QString text = item->text();
         std::string str = text.toStdString();
         str.erase(0, str.find_first_of(" "));
@@ -282,6 +272,7 @@ void MainWindow::addIngredient(Ingredient ingrd) {
         replace(str.begin(), str.end(), ' ', '_');
         text = QString::fromStdString(str);
 
+        // 
         double val = myFridge.getIngredient(idx).getAmnt();
         double iremval = val + (ingrd.getAmnt());
         QTableWidgetItem *count = new QTableWidgetItem(QString::number(iremval));
@@ -289,29 +280,34 @@ void MainWindow::addIngredient(Ingredient ingrd) {
 
         myFridge.addIngredient(ingrd);
         return;
+    // If the Ingedient is not already in the list
     } else {
         // add another elemnt to the model and view (Both at the end of the list)
         idx = myFridge.size();
 
-
         QTableWidgetItem *item = new QTableWidgetItem(QString::fromStdString(ingrd.getName()));
-        item->setFlags(item->flags() & ~Qt::ItemIsEditable);
         QTableWidgetItem *count = new QTableWidgetItem(QString::number(ingrd.getAmnt()));
-        count->setFlags(count->flags() & ~Qt::ItemIsEditable);
         QTableWidgetItem *unit = new QTableWidgetItem(QString::fromStdString(ingrd.getUnit()));
+        
+        // Make the item uneditable
+        item->setFlags(item->flags() & ~Qt::ItemIsEditable);
+        count->setFlags(count->flags() & ~Qt::ItemIsEditable);
         unit->setFlags(unit->flags() & ~Qt::ItemIsEditable);
 
-
+        // Add a new row
         myFridgeTable->setRowCount(myFridge.size()+1);
+        // Add the iem
         myFridgeTable->setItem(idx, 0, item);
+        // Add the Item count
         myFridgeTable->setItem(idx, 1, count);
+        // Add the items unit
         myFridgeTable->setItem(idx,2, unit);
 
         myFridge.addIngredient(ingrd);
     }
 }
 
-// subtract
+// subtract Ingredient button press
 void MainWindow::on_pushButton_2_clicked()
 {
 
@@ -342,6 +338,7 @@ void MainWindow::on_pushButton_2_clicked()
     addIngredient(tadd);
 }
 
+// Subtract Ingredient meethod
 void MainWindow::Subtract(Ingredient ingrd) {
     int idx = myFridge.searchItem(ingrd);
 
@@ -359,43 +356,112 @@ void MainWindow::Subtract(Ingredient ingrd) {
 
 }
 
-
-
 // save button
 void MainWindow::on_saveButton_clicked()
 {
-    myFridge.saveFile(usr.toStdString());
+    saveFile(usr.toStdString());
 }
 
-// cook button
-void MainWindow::on_pushButton_clicked()
+// save Fridge File
+void MainWindow::saveFile(string user)
 {
+
+    // get the original file
+    // save the username and password
+    // overwrite: username, passwor, fridge content
+
+    QString fileName = QString::fromStdString(user + ".txt");
+
+    // Get the parent directory of the current directory
+    QDir parentDir(QCoreApplication::applicationDirPath());
+    parentDir.cdUp();
+
+    // Append the "usr" directory and the file name to the parent directory path
+    QString filePath = parentDir.filePath("The-Fridge/usr/" + fileName);
+    QFile file(filePath);
+    qDebug() << filePath;
+    string usrnm;
+    string pswd;
+
+
+
+    // if the file does NOT exist
+    if( !(file.exists()) ) {
+    qDebug() << "Error Opening File: " << filePath;
+        return;
+    }
+
+    // get first two lines
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        //Stream in text
+        QTextStream in(&file);
+        //Read first line
+        usrnm = in.readLine().toStdString();
+        pswd = in.readLine().toStdString();
+        file.close();
+    }
+    else {
+        return
+    }
+
+    //--- write to the file----//
+    // create a new fstream object
+    if (file.open(QIODevice::WriteOnly | QIODevice::Text)){
+
+        // add the user name and passwrod
+        file.write((usrnm + "\n").c_str());
+        file.write((pswd + "\n").c_str());
+
+        // add the fridge contents
+
+        file.write( Fridge.getString().c_str() );
+
+
+    } else {
+    qDebug() << "Error Witing to File: " << filePath;
+    }
+    // close the file
+    file.close();
+
+
+
+}
+
+vector<Ingredient> MainWindow::canCook() {
     if (recipe == nullptr) {
         return;
     }
     bool canCook = true;
     vector<Ingredient> recip = recipe->getIngredients();
+    vector<Ingredient> miss;
+    string missing;
     for (int i =0; i < recip.size(); i++) {
-        if (myFridge.searchItem(recip[i]) < 0) {
+        int idx = myFridge.searchItem(recip[i]);
+        if (idx < 0) {
             if (canCook){
                 canCook = false;
-                qDebug() << "Ingredient not in Fridge: " << recip[i].getName();
+                miss.push_back(recip[i]);
             }
-        } else if ( myFridge.getIngredient(myFridge.searchItem(recip[i])).getAmnt() - recip[i].getAmnt() < 0 ) {
+        } else if ( int amt = myFridge.getIngredient(idx).getAmnt() - recip[i].getAmnt() < 0 ) {
             if (canCook){
                 canCook = false;
-                qDebug() << "not Enough Ingredient(s) not in Fridge:" << recip[i].getName();
+                miss.push_back(recip[i]);
             }
         }
     }
+    return canCook;
+}
 
-
-    if (!(canCook))
+// cook button
+void MainWindow::on_pushButton_clicked()
+{
+    vector<Ingredient> missing = canCook();
+    if (missing.size() > 0)
         return;
-
+    
+    vector<Ingredient> recip = recipe->getIngredients();
     for (int i =0; i < recip.size(); i++) {
-
-
+        Subtract(recip[i]);
     }
 }
 

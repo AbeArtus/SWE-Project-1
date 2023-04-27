@@ -20,6 +20,7 @@ public:
     MainWindow(QWidget *parent = nullptr, const QString& username = "");
     ~MainWindow();
     void addIngredient(Ingredient ingrd);
+    
 
 private slots:
     void on_actionlogin_triggered();
@@ -50,7 +51,8 @@ private:
     void populateRecipeList(const QString& folderPath, int arg);
     void displayRecipe(const QString& dirPath);
     void Subtract(Ingredient ingrd);
-
+    vector<Ingredient> canCook();
+    void saveFile(string user);
 
 };
 
