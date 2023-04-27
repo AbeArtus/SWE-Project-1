@@ -6,52 +6,71 @@
 
 @*sidebar*@
 <div class="sidenav">
+    <h4>Recipes:</h4>
     @foreach (var i in @Model.filePaths)
     {
+        
         <a href="Recipe?handler=viewRecipe&recipeName=@i" type="nav-link">@System.IO.Path.GetFileName(@i).Replace(".txt", "").Replace("_", " ")</a>
-
-        <br />
     }
 </div>
 
 <style>
     .sidenav {
         height: 100%;
-        width: 200px;
+        width: 250px;
         position: fixed;
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: #818181;
+        background-color: #36A78C;
         overflow-x: clip;
-        padding-top: 20px;
+        padding-top: 10px;
     }
 
+        .sidenav h4 {
+            color: #f1f1f1;
+            margin-left: 6px;
+        }
         .sidenav a {
-            padding: 6px 6px 6px 6px;
+            padding: 6px;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
             color: #f1f1f1;
             display: block;
         }
 
+    /* recipe content, content won't overlap sidebar */
+    .main {
+        margin-left: 250px;
+        padding: 0px 5px;
+    }
+
 </style>
 
-@*recipe*@
-<h1>@Model.recipe.Name</h1>
+<div class="main">
+    @*recipe*@
+    <h1>@Model.recipe.Name</h1>
     <p>@Model.recipe.Description</p>
-<hr>
-<h2>Ingredients</h2>
-<div>
-    @foreach (var i in @Model.recipe.Ingredients)
+    <hr>
+    <h2>Ingredients</h2>
+    <div>
+        @foreach (var i in @Model.recipe.Ingredients)
+        {
+            @i
+
+            <br />
+        }
+    </div>
+    <hr>
+
+    @foreach (var i in @Model.recipe.Directions)
     {
-        @i<br/>
+        @i
+
+        <br />
     }
 </div>
-<hr>
 
-@foreach (var i in @Model.recipe.Directions)
-{
-    @i<br />
-}
+
+
 
